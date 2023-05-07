@@ -38,4 +38,5 @@ if __name__ == "__main__":
     )
 
     games = regex_pgn_file(pgn_name)
-    [print(game) for game in games]
+    for game in games:
+        print(game)
