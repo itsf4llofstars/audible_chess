@@ -6,6 +6,7 @@ idea/
 *.json
 *.pgn
 !for_tests.pgn
+.flake8
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
