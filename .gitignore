@@ -6,6 +6,7 @@ idea/
 *.json
 *.pgn
 !for_tests.pgn
+!unittest.pgn
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
