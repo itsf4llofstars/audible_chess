@@ -28,8 +28,7 @@ def regex_pgn_file(filename: str) -> object:
         # Log this
         print(f"{fnfe}")
 
-    if chess_games:
-        return chess_games
+    return chess_games
 
 
 if __name__ == "__main__":
