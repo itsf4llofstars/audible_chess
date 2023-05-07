@@ -2,11 +2,13 @@
 import os
 import re
 
+# NOTE: r[aw] string in doc used to prevent flake8 linting errors
+
 
 def regex_pgn_file(filename: str) -> object:
     r"""Read a chess pgn file.
 
-    Return those lines beginning with "^(1.\s)"
+    Return those lines beginning with "^(1\.\s)"
     and end with "(\s[1-0|0-1])$" as a list of str's
 
     Args:
@@ -15,8 +17,8 @@ def regex_pgn_file(filename: str) -> object:
     Returns:
         List(str): Only strings of chess games
     """
-    game_begin = re.compile(r"^(1\.\s1\s)")
-    game_end = re.compile(r"(\s[1-0|0-1])$")
+    game_begin = re.compile(r"^(1\.\s)")
+    game_end = re.compile(r"(\s[0-1]|[0-1])$")
     chess_games = []
 
     try:
