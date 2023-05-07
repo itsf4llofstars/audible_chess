@@ -1,4 +1,5 @@
-"""functions.py"""
+"""The functions.py Python file."""
+import os
 import re
 
 
@@ -31,14 +32,11 @@ def regex_pgn_file(filename: str) -> object:
         return chess_games
 
 
-def main() -> None:
-    """main function"""
-    pgn_name = os.path.expanduser(
-        os.path.join("~", "python", "audible_chess", "docs", "tests.pgn")
-    )
-
-
 if __name__ == "__main__":
-    import os
-
-    main()
+    pgn_name = os.path.join(
+        "~",
+        "python",
+        "audible_chess",
+        "docs",
+        "tests.pgn",
+    ).expanduser()
