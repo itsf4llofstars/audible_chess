@@ -22,7 +22,7 @@ def regex_pgn_file(filename: str) -> object:
     try:
         with filename.open() as read:
             for line in read:
-                if re.seaerch(game_begin, line) and re.search(game_end, line.rtrip()):
+                if re.search(game_begin, line) and re.search(game_end, line.rtrip()):
                     chess_games.append(line.rstrip())
     except FileNotFoundError as fnfe:
         # Log this
