@@ -34,7 +34,7 @@ def regex_pgn_file(filename: str) -> object:
 
 if __name__ == "__main__":
     pgn_name = os.path.expanduser(
-        os.path.join("~", "python", "audible_chess", "docs", "for_tests.pgn")
+        os.path.join("~", "python", "audible_chess", "docs", "for_tests.pgn"),
     )
 
     games = regex_pgn_file(pgn_name)
