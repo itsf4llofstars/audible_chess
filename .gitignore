@@ -1,3 +1,12 @@
+# Authors and Contributors additions
+vscode/
+.vscode/
+idea/
+.idea/
+*.json
+*.pgn
+!for_tests.pgn
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
