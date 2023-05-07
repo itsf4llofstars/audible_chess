@@ -27,7 +27,6 @@ def regex_pgn_file(filename: str) -> object:
                 if re.search(game_begin, line) and re.search(game_end, line.rstrip()):
                     chess_games.append(line.rstrip())
     except FileNotFoundError as fnfe:
-        # Log this
         print(f"{fnfe}")
 
     return chess_games
