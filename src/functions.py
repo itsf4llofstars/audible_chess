@@ -22,9 +22,9 @@ def regex_pgn_file(filename: str) -> object:
     chess_games = []
 
     try:
-        with filename.open() as read:
+        with open(filename) as read:
             for line in read:
-                if re.search(game_begin, line) and re.search(game_end, line.rtrip()):
+                if re.search(game_begin, line) and re.search(game_end, line.rstrip()):
                     chess_games.append(line.rstrip())
     except FileNotFoundError as fnfe:
         # Log this
@@ -39,3 +39,4 @@ if __name__ == "__main__":
     )
 
     games = regex_pgn_file(pgn_name)
+    [print(game) for game in games]
