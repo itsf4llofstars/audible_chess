@@ -16,7 +16,7 @@ class TestFunctions(unittest.TestCase):
             os.path.join("~", "python", "audible_chess", "docs", "unittest.pgn")
         )
         test_games = regex_pgn_file(test_pgn)
-        self.assertEqual(test_games, ["1. e4 e5 2. Nf3 Nc6 1-0", "1. e4 e5 2. Nc3 0-1"])
+        self.assertEqual(test_games, ["1. e4 e5 2. Nf3 Nc6 1-0", "1. e4 e5 2. Nf3 0-1"])
 
 
 if __name__ == "__main__":
