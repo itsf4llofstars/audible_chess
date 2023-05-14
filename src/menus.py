@@ -14,6 +14,7 @@ def print_menu() -> None:
 
 
 def get_users_choice() -> int:
+    """Error checking required"""
     return int(input("\tChoice (1, 2, 3, 4, 5): "))
 
 
@@ -29,12 +30,25 @@ def min_max_moves() -> None:
     print(move_str)
 
 
+def get_moves() -> str:
+    """Error checking required
+    20[.], nnn[.] not allowed
+    """
+    moves = str(input("Enter your max moves: "))
+    moves = moves.strip()
+    if "." in moves:
+        moves = moves.replace(".", "")
+    return moves
+
+
 def main():
     print_menu()
     users_ending = get_users_choice()
     print(users_ending)
     os.system("clear")
     min_max_moves()
+    max_move = get_moves()
+    print(max_move)
 
 
 if __name__ == "__main__":
