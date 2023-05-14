@@ -45,7 +45,6 @@ def strip_mate_query() -> bool:
     strip_mate = str(input("Do you wish to strip the last checkmating move? (y/n): "))
     strip_mate = strip_mate.strip()
     strip_mate = strip_mate.lower()
-    print(strip_mate)
 
     if strip_mate == 'yes' or strip_mate == 'y':
         return True
@@ -59,9 +58,13 @@ def main():
     os.system("clear")
     min_max_moves()
     max_move = get_moves()
+    strip_last_move = None
     if users_ending == 3 or users_ending == 5:
         strip_last_move = strip_mate_query()
-    print(strip_last_move)
+    if strip_last_move is not None:
+        print(users_ending, max_move, strip_last_move)
+    else:
+        print(users_ending, max_move)
 
 
 if __name__ == "__main__":
