@@ -41,14 +41,27 @@ def get_moves() -> str:
     return moves
 
 
+def strip_mate_query() -> bool:
+    strip_mate = str(input("Do you wish to strip the last checkmating move? (y/n): "))
+    strip_mate = strip_mate.strip()
+    strip_mate = strip_mate.lower()
+    print(strip_mate)
+
+    if strip_mate == 'yes' or strip_mate == 'y':
+        return True
+
+    return False
+
+
 def main():
     print_menu()
     users_ending = get_users_choice()
-    print(users_ending)
     os.system("clear")
     min_max_moves()
     max_move = get_moves()
-    print(max_move)
+    if users_ending == 3 or users_ending == 5:
+        strip_last_move = strip_mate_query()
+    print(strip_last_move)
 
 
 if __name__ == "__main__":
