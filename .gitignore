@@ -5,6 +5,7 @@ idea/
 .idea/
 *.json
 *.pgn
+*.swp
 !for_tests.pgn
 !unittest.pgn
 
