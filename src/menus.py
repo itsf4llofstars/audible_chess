@@ -9,6 +9,7 @@ def print_menu() -> None:
         "\t\t3. White wins by checkmate\n"
         "\t\t4. Black Wins\n"
         "\t\t5. Black wins by checkmate\n"
+        "\t\t6. Exit\n"
     )
     print(menu_text)
 
