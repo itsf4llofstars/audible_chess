@@ -40,7 +40,7 @@ def get_moves() -> str:
     """
     moves = int(input("Enter your max moves (21 - 99):"))
     if 20 < moves < 100:
-        moves = r"\s{str(moves)}.\s"
+        moves = f" {str(moves)}. "
         return moves
     raise ValueError("Max Move must be a number between 21 and 99.")
 
@@ -59,16 +59,20 @@ def strip_mate_query() -> bool:
 def main():
     print_menu()
     users_ending = get_users_choice()
+
     os.system("clear")
+
     min_max_moves()
     max_move = get_moves()
+
     strip_last_move = None
     if users_ending == 3 or users_ending == 5:
         strip_last_move = strip_mate_query()
+
+    print(f"Endings: {users_ending}\nMove: {max_move}")
+
     if strip_last_move is not None:
-        print(users_ending, max_move, strip_last_move)
-    else:
-        print(users_ending, max_move)
+        print(f"Stripe mate: {strip_last_move}")
 
 
 if __name__ == "__main__":
