@@ -29,14 +29,14 @@ def min_max_moves() -> None:
         "\tnumber of moves you want for your study game.\n\n"
         "\tExample: Entering 38 can result in games ending between 20 and 38\n"
         "\tmoves, (inclusive). There is no need to add leading or trailing\n"
-        "\tspaces or, a period."
+        "\tspaces or, a period.\n"
     )
     print(move_str)
 
 
 def get_moves() -> str:
     """Error checking required"""
-    moves = int(input("Enter your max moves (21 - 99): "))
+    moves = int(input("\tEnter your max moves (21 - 99): "))
     if 20 < moves < 100:
         moves = f" {str(moves)}. "
         return moves
