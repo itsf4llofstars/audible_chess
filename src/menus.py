@@ -16,7 +16,10 @@ def print_menu() -> None:
 
 def get_users_choice() -> int:
     """Error checking required"""
-    return int(input("\tChoice (1, 2, 3, 4, 5): "))
+    choice = int(input("\tChoice (1 - 6): "))
+    if 0 < choice < 7:
+        return choice
+    raise ValueError("Choice must be an number between 1 and 6.")
 
 
 def min_max_moves() -> None:
