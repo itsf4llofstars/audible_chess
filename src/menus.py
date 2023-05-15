@@ -35,10 +35,8 @@ def min_max_moves() -> None:
 
 
 def get_moves() -> str:
-    """Error checking required
-    20[.], nnn[.] not allowed
-    """
-    moves = int(input("Enter your max moves (21 - 99):"))
+    """Error checking required"""
+    moves = int(input("Enter your max moves (21 - 99): "))
     if 20 < moves < 100:
         moves = f" {str(moves)}. "
         return moves
@@ -46,9 +44,9 @@ def get_moves() -> str:
 
 
 def strip_mate_query() -> bool:
+    """Error check required"""
     strip_mate = str(input("Do you wish to strip the last checkmating move? (y/n): "))
-    strip_mate = strip_mate.strip()
-    strip_mate = strip_mate.lower()
+    strip_mate = strip_mate.strip().lower()
 
     if strip_mate == 'yes' or strip_mate == 'y':
         return True
