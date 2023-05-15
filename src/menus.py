@@ -38,11 +38,11 @@ def get_moves() -> str:
     """Error checking required
     20[.], nnn[.] not allowed
     """
-    moves = str(input("Enter your max moves: "))
-    moves = moves.strip()
-    if "." in moves:
-        moves = moves.replace(".", "")
-    return moves
+    moves = int(input("Enter your max moves (21 - 99):"))
+    if 20 < moves < 100:
+        moves = r"\s{str(moves)}.\s"
+        return moves
+    raise ValueError("Max Move must be a number between 21 and 99.")
 
 
 def strip_mate_query() -> bool:
