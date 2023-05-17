@@ -31,15 +31,17 @@ def regex_pgn_file(filename: str) -> object:
 
 
 def fast_pgn_file(filename: str):
+    start = "1. "
+    white = " 1-0"
+    black = " 0-1"
+    draw = " 1/2-1/2"
     pgn_games = []
     try:
         with open(filename) as read:
             for line in read:
                 line = line.strip()
                 if line.startswith(start) and (
-                    line.endswith(" 1-0")
-                    or line.endswith(" 0-1")
-                    or line.endswith(" 1/2-1/2")
+                    line.endswith(white) or line.endswith(black) or line.endswith(draw)
                 ):
                     pgn_games.append(line)
     except FileNotFoundError as fnfe:
@@ -54,7 +56,8 @@ def main():
         os.path.join("~", "python", "audible_chess", "docs", "for_tests.pgn"),
     )
 
-    games = regex_pgn_file(pgn_name)
+    # games = regex_pgn_file(pgn_name)
+    games = fast_pgn_file(pgn_name)
     for game in games:
         print(game)
 
