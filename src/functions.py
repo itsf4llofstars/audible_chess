@@ -31,7 +31,22 @@ def regex_pgn_file(filename: str) -> object:
 
 
 def fast_pgn_file(filename: str):
-    ...
+    pgn_games = []
+    try:
+        with open(filename) as read:
+            for line in read:
+                line = line.strip()
+                if line.startswith(start) and (
+                    line.endswith(" 1-0")
+                    or line.endswith(" 0-1")
+                    or line.endswith(" 1/2-1/2")
+                ):
+                    pgn_games.append(line)
+    except FileNotFoundError as fnfe:
+        print(f"{fnfe}")
+    finally:
+        if pgn_games:
+            return pgn_games
 
 
 def main():
