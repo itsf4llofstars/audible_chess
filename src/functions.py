@@ -30,6 +30,10 @@ def regex_pgn_file(filename: str) -> object:
     return chess_games
 
 
+def fast_pgn_file(filename: str):
+    ...
+
+
 def main():
     pgn_name = os.path.expanduser(
         os.path.join("~", "python", "audible_chess", "docs", "for_tests.pgn"),
