@@ -2,11 +2,9 @@
 import os
 import re
 
-# NOTE: r[aw] string in doc used to prevent flake8 linting errors
-
 
 def regex_pgn_file(filename: str) -> object:
-    r"""Read a chess pgn file.
+    r"""Read a chess pgn file. ("r" is to prevent flake8 errors)
 
     Return those lines beginning with "^(1\.\s)"
     and end with "(\s[1-0|0-1])$" as a list of str's
