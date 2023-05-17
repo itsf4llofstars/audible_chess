@@ -65,7 +65,7 @@ def fast_pgn_file(filename: str):
 
 
 def set_max_move(max_move):
-    regex["max_move_re"] = re.compile(r"\s" + max_move + r"\.\s")
+    regex["max_move_re"] = re.compile(r"\s" + str(max_move) + r"\.\s")
     regex["max_move"] = f" {max_move}. "
 
 
