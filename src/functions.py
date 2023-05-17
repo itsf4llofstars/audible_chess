@@ -1,6 +1,7 @@
 """The functions.py Python file."""
 import os
 import re
+import sys
 from pgn_parsers import regex
 
 
@@ -57,9 +58,10 @@ def fast_pgn_file(filename: str):
                     line.endswith(white) or line.endswith(black) or line.endswith(draw)
                 ):
                     pgn_games.append(line)
-    except FileNotFoundError as fnfe:
-        print(f"{fnfe}")
-    finally:
+    except FileNotFoundError:
+        print("File not found: fast_pgn_file()")
+        sys.exit()
+    else:
         if pgn_games:
             return pgn_games
 

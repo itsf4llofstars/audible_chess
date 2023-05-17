@@ -41,9 +41,6 @@ if user_end_choice == 3 or user_end_choice == 5:
 #     print(f"{user_end_choice = } {max_move = }")
 
 f.set_max_move(max_move)
-print(pp.regex)
-sys.exit()
-
 
 pgn_file = os.path.expanduser(
     os.path.join("/", "medial", "bumper", "EDD2-E40F", "raspi", "lichess_short.pgn")
