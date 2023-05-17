@@ -1,7 +1,11 @@
 """pgn_parsers.py"""
 import re
 
-regex = {"min_move": r"", "max_move": r""}
+regex = {"min_move_re": re.compile(r"\s20\.\s"), "min_move": " 20. "}
+
+
+def proper_length_games(chess_games):
+    ...
 
 
 def main():
