@@ -1,6 +1,7 @@
 """The functions.py Python file."""
 import os
 import re
+from pgn_parser import regex
 
 
 def regex_pgn_file(filename: str) -> object:
@@ -61,6 +62,11 @@ def fast_pgn_file(filename: str):
     finally:
         if pgn_games:
             return pgn_games
+
+
+def set_max_move(max_move):
+    regex["max_move_re"] = re.compile(r"\s" + max_mvoe + r"\.\s")
+    regex["max_move"] = f" {max_move}. "
 
 
 def main():
