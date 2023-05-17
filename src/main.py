@@ -43,7 +43,7 @@ if user_end_choice == 3 or user_end_choice == 5:
 f.set_max_move(max_move)
 
 pgn_file = os.path.expanduser(
-    os.path.join("/", "medial", "bumper", "EDD2-E40F", "raspi", "lichess_short.pgn")
+    os.path.join("/", "media", "bumper", "EDD2-E40F", "raspi32", "lichess_short.pgn")
 )
 all_games = f.fast_pgn_file(pgn_file)
 [print(game) for game in all_games]
