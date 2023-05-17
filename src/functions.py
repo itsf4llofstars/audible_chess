@@ -31,6 +31,18 @@ def regex_pgn_file(filename: str) -> object:
 
 
 def fast_pgn_file(filename: str):
+    """Read a chess pgn file
+
+    Return those lines that begin with "1. " and end with
+    either " 1-0", "0-1", " 1/2-1/2", using no regex for
+    fasters parsing of large files.
+
+    Args:
+        filename (str): Path and name of the pgn file
+
+    Returns:
+        List(str): Only strings of chess games
+    """
     start = "1. "
     white = " 1-0"
     black = " 0-1"
