@@ -9,7 +9,7 @@ def ending_menu() -> str:
         "\n\t\t3. White Wins by Checkmate"
         "\n\t\t4. Black Wins"
         "\n\t\t5. Black Wins by Checkmate"
-        "\n\t\t6. Exit\n"
+        "\n\t\t6. Exit\n\n"
     )
 
 

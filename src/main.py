@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-<<<<<<< HEAD
 """main.py
 
 Audible Chess Project main Python file
@@ -50,35 +49,10 @@ all_games = f.fast_pgn_file(pgn_file)
 [print(game) for game in all_games]
 
 sys.exit()
-=======
-import os
-import menus as m
-
-os.system("clear")
-
-<<<<<<< HEAD
-m.ending_menu()
->>>>>>> 9c8b621 (Format menu_text)
-=======
 print(m.ending_menu())
-<<<<<<< HEAD
->>>>>>> 39b9a69 (Change ending_menu to return str)
-=======
+game_ending = f.get_ending()
 print(m.strip_mate())
-<<<<<<< HEAD
->>>>>>> 99f3a0f (Add strip last move menu text)
-=======
 print(m.max_moves())
-<<<<<<< HEAD
->>>>>>> 5e93ae7 (Add max move menu text)
-=======
 print(m.pgn_path())
-<<<<<<< HEAD
->>>>>>> e806685 (Add pgn path menu text)
-=======
 print(m.pgn_file_name())
-<<<<<<< HEAD
->>>>>>> 7f34d50 (Add pgn file name menu text)
-=======
 print(m.move_seconds())
->>>>>>> a87e619 (Add move seconds func and text)

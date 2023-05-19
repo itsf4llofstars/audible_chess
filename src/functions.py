@@ -71,6 +71,10 @@ def set_max_move(max_move):
     regex["max_move"] = f" {max_move}. "
 
 
+def get_ending() -> str:
+    return str(input("\tCHOICE: "))
+
+
 def main():
     pgn_name = os.path.expanduser(
         os.path.join("~", "python", "audible_chess", "docs", "for_tests.pgn"),
