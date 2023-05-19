@@ -63,6 +63,10 @@ def strip_mate_query() -> bool:
     return False
 
 
+def move_seconds():
+    return "\n\n\tPlease enter the number of seconds between each move: "
+
+
 def main():
     print_menu()
     users_ending = get_users_choice()

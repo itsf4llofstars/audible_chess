@@ -77,4 +77,8 @@ print(m.pgn_path())
 >>>>>>> e806685 (Add pgn path menu text)
 =======
 print(m.pgn_file_name())
+<<<<<<< HEAD
 >>>>>>> 7f34d50 (Add pgn file name menu text)
+=======
+print(m.move_seconds())
+>>>>>>> a87e619 (Add move seconds func and text)
