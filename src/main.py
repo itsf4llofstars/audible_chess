@@ -51,7 +51,10 @@ all_games = f.fast_pgn_file(pgn_file)
 sys.exit()
 print(m.ending_menu())
 game_ending = f.get_ending()
+
 print(m.strip_mate())
+strip_mate = f.get_strip_mate()
+
 print(m.max_moves())
 print(m.pgn_path())
 print(m.pgn_file_name())

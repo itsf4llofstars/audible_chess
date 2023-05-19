@@ -75,6 +75,10 @@ def get_ending() -> str:
     return str(input("\tCHOICE: "))
 
 
+def get_strip_mate() -> str:
+    return str(input("\tWould your like to strip that last mate move? [y/n]: "))
+
+
 def main():
     pgn_name = os.path.expanduser(
         os.path.join("~", "python", "audible_chess", "docs", "for_tests.pgn"),
