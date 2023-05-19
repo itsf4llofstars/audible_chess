@@ -42,6 +42,16 @@ def get_moves() -> int:
     raise ValueError("Max Move must be a number between 21 and 99.")
 
 
+def max_moves():
+    return (
+        "\n\n\tThe minimum number of move is hard set at 20. for now.\n"
+        "\tYou can enter the maximun number of moves you would like to\n"
+        "\tstudy. If you want between 20 - 35 please enter 35. Your move\n"
+        "\tmust be above 20 and below 100.\n\n"
+        "\tEnter your maximum number of moves: \n"
+    )
+
+
 def strip_mate_query() -> bool:
     """Error check required"""
     strip_mate = str(input("Do you wish to strip the last checkmating move? (y/n): "))
