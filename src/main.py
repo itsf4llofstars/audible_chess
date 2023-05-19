@@ -56,5 +56,9 @@ import menus as m
 
 os.system("clear")
 
+<<<<<<< HEAD
 m.ending_menu()
 >>>>>>> 9c8b621 (Format menu_text)
+=======
+print(m.ending_menu())
+>>>>>>> 39b9a69 (Change ending_menu to return str)
