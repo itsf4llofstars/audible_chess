@@ -52,9 +52,11 @@ sys.exit()
 print(m.ending_menu())
 game_ending = f.get_ending()
 
+os.system("clear")
 print(m.strip_mate())
 strip_mate = f.get_strip_mate()
 
+os.system("clear")
 print(m.max_moves())
 max_move = f.get_max_move()
 

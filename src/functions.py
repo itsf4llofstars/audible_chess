@@ -88,7 +88,10 @@ def get_max_move() -> int:
             ...
         finally:
             if isinstance(move, int):
-                return move
+                if 20 < move < 100:
+                    return move
+                print("\n\tEnter a number 21 - 99\n")
+                continue
             print("\n\tPlease enter only and integer\n")
             continue
 
