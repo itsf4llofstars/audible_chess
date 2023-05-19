@@ -61,4 +61,8 @@ m.ending_menu()
 >>>>>>> 9c8b621 (Format menu_text)
 =======
 print(m.ending_menu())
+<<<<<<< HEAD
 >>>>>>> 39b9a69 (Change ending_menu to return str)
+=======
+print(m.strip_mate())
+>>>>>>> 99f3a0f (Add strip last move menu text)
