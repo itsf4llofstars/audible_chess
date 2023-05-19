@@ -56,6 +56,8 @@ print(m.strip_mate())
 strip_mate = f.get_strip_mate()
 
 print(m.max_moves())
+max_move = f.get_max_move()
+
 print(m.pgn_path())
 print(m.pgn_file_name())
 print(m.move_seconds())

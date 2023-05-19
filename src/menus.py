@@ -47,8 +47,7 @@ def max_moves() -> str:
         "\n\n\tThe minimum number of move is hard set at 20. for now.\n"
         "\tYou can enter the maximun number of moves you would like to\n"
         "\tstudy. If you want between 20 - 35 please enter 35. Your move\n"
-        "\tmust be above 20 and below 100.\n\n"
-        "\tEnter your maximum number of moves: \n"
+        "\tmust be above 20 and below 100. Enter the number withoug the period.\n\n"
     )
 
 
