@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 """main.py
 
 Audible Chess Project main Python file
@@ -49,3 +50,11 @@ all_games = f.fast_pgn_file(pgn_file)
 [print(game) for game in all_games]
 
 sys.exit()
+=======
+import os
+import menus as m
+
+os.system("clear")
+
+m.ending_menu()
+>>>>>>> 9c8b621 (Format menu_text)
