@@ -73,4 +73,8 @@ print(m.max_moves())
 >>>>>>> 5e93ae7 (Add max move menu text)
 =======
 print(m.pgn_path())
+<<<<<<< HEAD
 >>>>>>> e806685 (Add pgn path menu text)
+=======
+print(m.pgn_file_name())
+>>>>>>> 7f34d50 (Add pgn file name menu text)
