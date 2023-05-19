@@ -42,7 +42,7 @@ def get_moves() -> int:
     raise ValueError("Max Move must be a number between 21 and 99.")
 
 
-def max_moves():
+def max_moves() -> str:
     return (
         "\n\n\tThe minimum number of move is hard set at 20. for now.\n"
         "\tYou can enter the maximun number of moves you would like to\n"

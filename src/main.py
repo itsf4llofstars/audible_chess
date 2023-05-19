@@ -69,4 +69,8 @@ print(m.strip_mate())
 >>>>>>> 99f3a0f (Add strip last move menu text)
 =======
 print(m.max_moves())
+<<<<<<< HEAD
 >>>>>>> 5e93ae7 (Add max move menu text)
+=======
+print(m.pgn_path())
+>>>>>>> e806685 (Add pgn path menu text)
