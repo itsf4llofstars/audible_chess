@@ -80,7 +80,17 @@ def get_strip_mate() -> str:
 
 
 def get_max_move() -> int:
-    return int(input("\tEnter your maximum number of moves: "))
+    move = None
+    while True:
+        try:
+            move = int(input("\tEnter your maximum number of moves: "))
+        except Exception:
+            ...
+        finally:
+            if isinstance(move, int):
+                return move
+            print("\n\tPlease enter only and integer\n")
+            continue
 
 
 def main():
