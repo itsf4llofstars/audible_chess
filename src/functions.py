@@ -35,10 +35,13 @@ def strip_mate_query() -> bool:
     strip_mate = str(input("Do you wish to strip the last checkmating move? (y/n): "))
     strip_mate = strip_mate.strip().lower()
 
-    if strip_mate == "yes" or strip_mate == "y":
-        return True
-
-    return False
+    if strip_mate[0] == 'y' or strip_mate[0] == 'n':
+        if strip_mate[0] == 'y':
+            return True
+        elif strip_mate[0] == 'n':
+            return False
+    elif strip_mate[0] != 'y' or strip_mate[0] != 'n':
+        raise ValueError("A [y]es or [n]o was not entered.")
 
 
 def move_seconds():
@@ -137,12 +140,14 @@ def get_max_move() -> int:
 
 
 def main():
-    users_choice = get_users_choice()
-    print(f"{users_choice = }")
-    input("Cont... ")
-    moves = get_moves()
-    print(f"{moves = }")
-    input("Cont... ")
+    # users_choice = get_users_choice()
+    # print(f"{users_choice = }")
+    # input("Cont... ")
+    # moves = get_moves()
+    # print(f"{moves = }")
+    # input("Cont... ")
+    strip_mate = strip_mate_query()
+    print(f"{strip_mate = }")
 
 
 if __name__ == "__main__":
