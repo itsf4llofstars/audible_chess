@@ -13,9 +13,6 @@ def ending_menu() -> str:
     )
 
 
-
-
-
 def min_max_moves() -> None:
     move_str = (
         "\n\n\tThe minimum move for a game is currently hard set at 20.\n"
@@ -28,13 +25,7 @@ def min_max_moves() -> None:
     print(move_str)
 
 
-def get_moves() -> int:
-    """Error checking required"""
-    moves = int(input("\tEnter your max moves (21 - 99): "))
-    if 20 < moves < 100:
-        moves += 1
-        return moves
-    raise ValueError("Max Move must be a number between 21 and 99.")
+
 
 
 def strip_mate_query() -> bool:
