@@ -5,6 +5,14 @@ import sys
 from pgn_parsers import regex
 
 
+def get_users_choice() -> int:
+    """Error checking required"""
+    choice = int(input("\tChoice (1 - 6): "))
+    if 0 < choice < 7:
+        return choice
+    raise ValueError("Choice must be an number between 1 and 6.")
+
+
 def regex_pgn_file(filename: str) -> object:
     r"""Read a chess pgn file. ("r" is to prevent flake8 errors)
 
