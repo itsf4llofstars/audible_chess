@@ -9,6 +9,7 @@ runs the conditionals and regex patterns until the random line matches
 the required conditions.<br>
 
 ```python
+"""Slightly less than 14 seconds on a 1GB pgn file"""
 import os
 import sys
 import re
