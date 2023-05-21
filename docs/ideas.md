@@ -70,20 +70,25 @@ line if it meets the conditions then picks a random game
 and runs a more verbose regex condition
 
 ```python
+"""Slightly less than 30 seconds on a 1GB pgn file"""
 import os
 import sys
 import re
 import random
 
-filename = os.path.join("/", "media", "bumper", "EDD2-E40F", "raspi32", "lichess_201407.pgn")
+filename = os.path.expanduser(
+    os.path.join("~", "path", "to", "pgn_file", "pgn_file.pgn")
+)
 
 white = True
-if sys.argv[1] == "-b":
-    white = False
-
 mate = False
-if sys.argv[2] == "-m":
-    mate = True
+
+if len(sys.argv) == 3:
+    if sys.argv[1] == "-b":
+        white = False
+
+    if sys.argv[2] == "-m":
+        mate = True
 
 games = []
 
