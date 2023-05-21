@@ -24,10 +24,6 @@ def min_max_moves() -> str:
     )
 
 
-def move_seconds():
-    return "\n\n\tPlease enter the number of seconds between each move: "
-
-
 def main():
     ...
 
