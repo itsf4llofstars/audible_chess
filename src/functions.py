@@ -7,10 +7,14 @@ from pgn_parsers import regex
 
 def get_users_choice() -> int:
     """Error checking required"""
-    choice = int(input("\tChoice (1 - 6): "))
-    if 0 < choice < 7:
-        return choice
-    raise ValueError("Choice must be an number between 1 and 6.")
+    while True:
+        choice = int(input("\tChoice (1 - 6) 0 to quit: "))
+        if 1 <= choice < 7:
+            return choice
+        elif choice == 0:
+            sys.exit()
+        else:
+            print("\n\tEnter a number between 1 and 6 or 0 to exit.\n")
 
 
 def get_moves() -> int:
@@ -129,7 +133,8 @@ def get_max_move() -> int:
 
 
 def main():
-    ...
+    users_choice = get_users_choice()
+    print(f"{users_choice = }")
 
 
 if __name__ == "__main__":
