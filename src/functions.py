@@ -44,7 +44,7 @@ def strip_mate_query() -> bool:
         raise ValueError("A [y]es or [n]o was not entered.")
 
 
-def move_seconds():
+def move_seconds() -> int:
     return "\n\n\tPlease enter the number of seconds between each move: "
 
 
