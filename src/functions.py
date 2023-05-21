@@ -33,6 +33,10 @@ def strip_mate_query() -> bool:
     return False
 
 
+def move_seconds():
+    return "\n\n\tPlease enter the number of seconds between each move: "
+
+
 def regex_pgn_file(filename: str) -> object:
     r"""Read a chess pgn file. ("r" is to prevent flake8 errors)
 
