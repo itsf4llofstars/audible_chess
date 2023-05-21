@@ -114,10 +114,6 @@ def set_max_move(max_move):
     regex["max_move"] = f" {max_move}. "
 
 
-def get_strip_mate() -> str:
-    return str(input("\tWould your like to strip that last mate move? [y/n]: "))
-
-
 def main():
     # users_choice = get_users_choice()
     # print(f"{users_choice = }")
