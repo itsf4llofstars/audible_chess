@@ -13,6 +13,15 @@ def get_users_choice() -> int:
     raise ValueError("Choice must be an number between 1 and 6.")
 
 
+def get_moves() -> int:
+    """Error checking required"""
+    moves = int(input("\tEnter your max moves (21 - 99): "))
+    if 20 < moves < 100:
+        moves += 1
+        return moves
+    raise ValueError("Max Move must be a number between 21 and 99.")
+
+
 def regex_pgn_file(filename: str) -> object:
     r"""Read a chess pgn file. ("r" is to prevent flake8 errors)
 
