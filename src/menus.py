@@ -1,7 +1,7 @@
 """menus.py"""
 
 
-def ending_menu() -> str:
+def endings_menu() -> str:
     return (
         "\n\n\tSelect your game ending:\n"
         "\n\t\t1. Draw"
@@ -30,27 +30,10 @@ def move_seconds():
 
 
 def main():
-    print_menu()
-    users_ending = get_users_choice()
-
-    os.system("clear")
-
-    min_max_moves()
-    max_move = get_moves()
-
-    strip_last_move = None
-    if users_ending == 3 or users_ending == 5:
-        strip_last_move = strip_mate_query()
-
-    print(f"Endings: {users_ending}\nMove: {max_move}")
-
-    if strip_last_move is not None:
-        print(f"Stripe mate: {strip_last_move}")
-
+    ...
 
 if __name__ == "__main__":
     import os
 
     os.system("clear")
-
     main()
