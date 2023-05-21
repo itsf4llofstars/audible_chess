@@ -25,20 +25,6 @@ def min_max_moves() -> None:
     print(move_str)
 
 
-
-
-
-def strip_mate_query() -> bool:
-    """Error check required"""
-    strip_mate = str(input("Do you wish to strip the last checkmating move? (y/n): "))
-    strip_mate = strip_mate.strip().lower()
-
-    if strip_mate == "yes" or strip_mate == "y":
-        return True
-
-    return False
-
-
 def move_seconds():
     return "\n\n\tPlease enter the number of seconds between each move: "
 
