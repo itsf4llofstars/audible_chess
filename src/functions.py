@@ -22,6 +22,17 @@ def get_moves() -> int:
     raise ValueError("Max Move must be a number between 21 and 99.")
 
 
+def strip_mate_query() -> bool:
+    """Error check required"""
+    strip_mate = str(input("Do you wish to strip the last checkmating move? (y/n): "))
+    strip_mate = strip_mate.strip().lower()
+
+    if strip_mate == "yes" or strip_mate == "y":
+        return True
+
+    return False
+
+
 def regex_pgn_file(filename: str) -> object:
     r"""Read a chess pgn file. ("r" is to prevent flake8 errors)
 
