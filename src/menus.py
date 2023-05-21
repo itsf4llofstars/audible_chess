@@ -13,8 +13,8 @@ def endings_menu() -> str:
     )
 
 
-def min_max_moves() -> None:
-    move_str = (
+def min_max_moves() -> str:
+    return (
         "\n\n\tThe minimum move for a game is currently hard set at 20.\n"
         "\tThe maximum move is left up to you, please enter the maximum\n"
         "\tnumber of moves you want for your study game.\n\n"
@@ -22,7 +22,6 @@ def min_max_moves() -> None:
         "\tmoves, (inclusive). There is no need to add leading or trailing\n"
         "\tspaces or, a period.\n"
     )
-    print(move_str)
 
 
 def move_seconds():
