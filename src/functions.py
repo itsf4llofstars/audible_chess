@@ -19,11 +19,15 @@ def get_users_choice() -> int:
 
 def get_moves() -> int:
     """Error checking required"""
-    moves = int(input("\tEnter your max moves (21 - 99): "))
-    if 20 < moves < 100:
-        moves += 1
-        return moves
-    raise ValueError("Max Move must be a number between 21 and 99.")
+    while True:
+        moves = int(input("\tEnter your max moves (21 - 99) 0 to quit: "))
+        if 20 < moves < 100:
+            moves += 1
+            return moves
+        elif moves == 0:
+            sys.exit()
+        else:
+            print("\n\tPlease enter a number between 21 and 99 or 0 to quit.\n")
 
 
 def strip_mate_query() -> bool:
@@ -135,6 +139,10 @@ def get_max_move() -> int:
 def main():
     users_choice = get_users_choice()
     print(f"{users_choice = }")
+    input("Cont... ")
+    moves = get_moves()
+    print(f"{moves = }")
+    input("Cont... ")
 
 
 if __name__ == "__main__":
