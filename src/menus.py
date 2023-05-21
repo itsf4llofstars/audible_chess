@@ -25,7 +25,9 @@ def min_max_moves() -> str:
 
 
 def main():
-    ...
+    print(endings_menu())
+    input("cont...")
+    print(min_max_moves())
 
 if __name__ == "__main__":
     import os
