@@ -15,17 +15,24 @@ irooted4hal@mailfence.com
 import menus as m
 import functions as f
 import pgn_parsers as pp
+import os
 
+os.system("clear")
 print(m.endings_menu())
 user_ending = f.get_users_choice()
 
+os.system("clear")
 print(m.min_max_moves())
 user_max_move = f.get_moves()
 f.set_max_move(user_max_move)
 
+os.system("clear")
 user_mate = f.strip_mate_query()
+
+os.system("clear")
 user_move_time = f.move_seconds()
 
+os.system("clear")
 print(f"{user_ending = }")
 print(f"{user_max_move = }")
 print(f"{pp.regex['max_move'] = }")
