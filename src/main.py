@@ -27,7 +27,7 @@ user_max_move = f.get_moves()
 f.set_max_move(user_max_move)
 
 user_mate = False
-if  user_ending == 3 or user_ending == 5:
+if user_ending == 3 or user_ending == 5:
     os.system("clear")
     user_mate = f.strip_mate_query()
 
