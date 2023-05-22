@@ -11,7 +11,7 @@ def get_users_choice() -> int:
         choice = int(input("\tChoice (1 - 6) 0 to quit: "))
         if 1 <= choice < 7:
             return choice
-        elif choice == 0:
+        elif choice == 6:
             sys.exit()
         else:
             print("\n\tEnter a number between 1 and 6 or 0 to exit.\n")
