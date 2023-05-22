@@ -15,10 +15,6 @@ irooted4hal@mailfence.com
 import menus as m
 import functions as f
 import pgn_parsers as pp
-import os
-import sys
-
-os.system("clear")
 
 print(m.endings_menu())
 user_ending = f.get_users_choice()
