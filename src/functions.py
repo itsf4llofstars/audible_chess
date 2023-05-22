@@ -45,7 +45,7 @@ def strip_mate_query() -> bool:
 
 
 def move_seconds() -> int:
-    return "\n\n\tPlease enter the number of seconds between each move: "
+    return int(input("\n\n\tPlease enter the number of seconds between each move: "))
 
 
 def regex_pgn_file(filename: str) -> object:
