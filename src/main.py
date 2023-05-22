@@ -26,8 +26,10 @@ print(m.min_max_moves())
 user_max_move = f.get_moves()
 f.set_max_move(user_max_move)
 
-os.system("clear")
-user_mate = f.strip_mate_query()
+user_mate = False
+if  user_ending == 3 or user_ending == 5:
+    os.system("clear")
+    user_mate = f.strip_mate_query()
 
 os.system("clear")
 user_move_time = f.move_seconds()
