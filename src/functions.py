@@ -8,8 +8,8 @@ from pgn_parsers import regex
 def get_users_choice() -> int:
     """Error checking required"""
     while True:
-        choice = int(input("\tChoice (1 - 6) 0 to quit: "))
-        if 1 <= choice < 7:
+        choice = int(input("\tChoice (1 - 6): "))
+        if 1 <= choice < 6:
             return choice
         elif choice == 6:
             sys.exit()
