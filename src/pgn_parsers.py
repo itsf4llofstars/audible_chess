@@ -1,11 +1,6 @@
 """pgn_parsers.py"""
-import re
 
-regex = {"min_move_re": r"\s20\.\s", "min_move": " 20. "}
-
-
-def proper_length_games(chess_games):
-    ...
+pattern = {"star": "1. ",}
 
 
 def main():
