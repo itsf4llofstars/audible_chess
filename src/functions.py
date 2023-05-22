@@ -45,7 +45,11 @@ def strip_mate_query() -> bool:
 
 
 def move_seconds() -> int:
-    return int(input("\n\n\tPlease enter the number of seconds between each move: "))
+    """Error check needed"""
+    seconds =  int(input("\n\n\tPlease enter the number of seconds between each move: "))
+    assert isinstance(seconds, int)
+    assert seconds > 4
+    return seconds
 
 
 def regex_pgn_file(filename: str) -> object:
@@ -121,8 +125,10 @@ def main():
     # moves = get_moves()
     # print(f"{moves = }")
     # input("Cont... ")
-    strip_mate = strip_mate_query()
-    print(f"{strip_mate = }")
+    # strip_mate = strip_mate_query()
+    # print(f"{strip_mate = }")
+    secs = move_seconds()
+    print(f"{secs = }")
 
 
 if __name__ == "__main__":
