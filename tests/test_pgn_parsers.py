@@ -12,12 +12,10 @@ class TestGamesList(unittest.TestCase):
 
     def test_read_file(self):
         unittest_pgn = os.path.expanduser(
-            os.path.join("~", "pythone", "audible_chess", "docs", "uinttest.pgn")
+            os.path.join("~", "python", "audible_chess", "docs", "unittest.pgn")
         )
         test_chess_games = read_file(unittest_pgn)
-        self.assertEqual(
-            test_chess_games, ["1. xx xx 2. xx xx", "1. xx xx 2. xx xx"]]
-        )
+        self.assertEqual(test_chess_games, ["1. xx xx 2. xx xx", "1. xx xx 2. xx xx"])
 
 
 if __name__ == "__main__":
