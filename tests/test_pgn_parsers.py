@@ -13,6 +13,23 @@ test_moves = [
     "1. xx xx 20. xx xx 33. xx xx",
 ]
 
+test_kibitz = [
+    "1. xx xx 2. ( xx xx ) 3. xx xx",
+    "1. xx xx 2. ( xx xx 3. xx xx",
+    "1. xx xx 2. ) xx xx 3. xx xx",
+    "1. xx xx 2. xx xx 3. xx xx",
+    "1. xx xx 2. { xx xx } 3. xx xx",
+    "1. xx xx 2. xx xx } 3. xx xx",
+    "1. xx xx 2. { xx xx 3. xx xx",
+    "1. xx xx 2. [ xx xx ] 3. xx xx",
+    "1. xx xx 2. xx xx ] 3. xx xx",
+    "1. xx xx 2. [ xx xx 3. xx xx",
+    "1. xx xx 2. < xx xx > 3. xx xx",
+    "1. xx xx 2. xx xx 3. xx xx",
+    "1. xx xx 2. xx xx > 3. xx xx",
+    "1. xx xx 2. < xx xx 3. xx xx",
+]
+
 
 class TestGamesList(unittest.TestCase):
     """Unittests to test the pgn_parser.py file
@@ -28,7 +45,10 @@ class TestGamesList(unittest.TestCase):
 
     def test_min_max_move(self):
         test_chess_games = min_max_move(test_moves)
-        self.assertEqual(test_chess_games, ["1. xx xx 20. xx xx 39. xx xx", "1. xx xx 20. xx xx 33. xx xx"])
+        self.assertEqual(
+            test_chess_games,
+            ["1. xx xx 20. xx xx 39. xx xx", "1. xx xx 20. xx xx 33. xx xx"],
+        )
 
 
 if __name__ == "__main__":
