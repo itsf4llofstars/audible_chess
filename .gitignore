@@ -7,6 +7,7 @@ idea/
 *.pgn
 *.swp
 !for_tests.pgn
+!test_read_file.pgn
 !unittest.pgn
 
 # Byte-compiled / optimized / DLL files
