@@ -4,6 +4,7 @@ import unittest
 
 from src.pgn_parsers import min_max_move
 from src.pgn_parsers import read_file
+from src.pgn_parsers import no_kibitz
 
 test_moves = [
     "1. xx xx 19. xx xx 39. xx xx",
@@ -48,6 +49,13 @@ class TestGamesList(unittest.TestCase):
         self.assertEqual(
             test_chess_games,
             ["1. xx xx 20. xx xx 39. xx xx", "1. xx xx 20. xx xx 33. xx xx"],
+        )
+
+    def test_no_kibitz(self):
+        test_chess_games = no_kibitz(test_kibitz)
+        self.assertEqual(
+            test_chess_games,
+            ["1. xx xx 2. xx xx 3. xx xx", "1. xx xx 2. xx xx 3. xx xx"],
         )
 
 
