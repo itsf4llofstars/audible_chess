@@ -35,10 +35,10 @@ def min_max_move(games):
 
 
 def main():
-    chess_games = read_file("/home/bumper/chess/bumper.pgn")
+    chess_games = read_file("/home/bumper/chess/chess.pgn")
 
     min_max_move(chess_games)
-    print(chess_games[101])
+    [print(game) for game in chess_games]
 
 
 if __name__ == "__main__":
