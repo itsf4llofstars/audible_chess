@@ -19,6 +19,13 @@ def read_file(filename: str) -> None:
             return games
 
 
-# pgn_file_lines = read_file("/media/bumper/EDD2-E40F/raspi32/lichess_short.pgn")
-pgn_file_lines = read_file("/home/bumper/python/audible_chess/docs/unittest.pgn")
-[print(line) for line in pgn_file_lines]
+def main():
+    pgn_file_lines = read_file("/media/bumper/EDD2-E40F/raspi32/lichess_short.pgn")
+    pgn_file_lines = read_file(
+        "/home/bumper/python/audible_chess/docs/test_read_file.pgn"
+    )
+    [print(line) for line in pgn_file_lines]
+
+
+if __name__ == "__main__":
+    main()
