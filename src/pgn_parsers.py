@@ -1,9 +1,10 @@
 """pgn_parsers.py"""
+import os
 
 pattern = {
     "start": "1. ",
     "min_move": " 20. ",
-    "max_move": " 40. ",  # NOTE: Must be removed for final release
+    "max_move": " 40. ",  # NOTE: Must be removed for final release. Must be 40 for tests
 }
 
 
@@ -36,10 +37,13 @@ def min_max_move(games):
 
 
 def main():
-    chess_games = read_file("/home/bumper/chess/chess.pgn")
+    pgn_file = os.path.expanduser(os.path.join("~", "chess", "bumper.pgn"))
 
+    chess_games = read_file(pgn_file)
     chess_games = min_max_move(chess_games)
-    [print(game) for game in chess_games]
+    print(len(chess_games))
+    print(chess_games[10])
+    # [print(game) for game in chess_games]
 
 
 if __name__ == "__main__":
