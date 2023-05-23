@@ -37,7 +37,7 @@ def min_max_move(games):
 
 
 def main():
-    pgn_file = os.path.expanduser(os.path.join("~", "chess", "bumper.pgn"))
+    pgn_file = os.path.expanduser(os.path.join("~", "chess", "chess.pgn"))
 
     chess_games = read_file(pgn_file)
     chess_games = min_max_move(chess_games)
