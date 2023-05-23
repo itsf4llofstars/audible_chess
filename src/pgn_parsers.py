@@ -35,10 +35,11 @@ def min_max_move(games):
 
 
 def main():
-    # chess_games = read_file("/media/bumper/EDD2-E40F/raspi32/lichess_short.pgn")
-    chess_games = read_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
+    chess_games = read_file("/media/bumper/EDD2-E40F/raspi32/lichess_short.pgn")
+    # chess_games = read_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
 
-    [print(line) for line in pgn_file_lines]
+    min_max_move(chess_games)
+    [print(line) for line in chess_games]
 
 
 if __name__ == "__main__":
