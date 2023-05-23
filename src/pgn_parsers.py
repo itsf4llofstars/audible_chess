@@ -6,23 +6,19 @@ pattern = {
 
 
 def read_file(filename: str) -> None:
+    games = []
     try:
         with open(filename) as read:
-            file_lines = read.readlines()
+            for line in read:
+                if line.startswith(pattern["start"]):
+                    games.append(line.rstrip())
     except FileNotFoundError as fnfe:
         print(f"{fnfe}")
-    else:
-        index = 0
-        for line in file_lines:
-            if not line.startswith(pattern["start"]):
-                file_lines.pop(index)
-                index -= 1
-            index += 1
-        if file_lines:
-            return file_lines
-        else:
-            raise Exception("File Parser Fail")
+    finally:
+        if games:
+            return games
 
 
-pgn_file_lines = read_file("/media/bumper/EDD2-E40F/raspi32/lichess_short.pgn")
+# pgn_file_lines = read_file("/media/bumper/EDD2-E40F/raspi32/lichess_short.pgn")
+pgn_file_lines = read_file("/home/bumper/python/audible_chess/docs/unittest.pgn")
 [print(line) for line in pgn_file_lines]
