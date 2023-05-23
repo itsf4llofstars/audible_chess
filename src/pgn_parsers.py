@@ -32,12 +32,13 @@ def min_max_move(games):
             index -= 1
 
         index += 1
+    return games
 
 
 def main():
     chess_games = read_file("/home/bumper/chess/chess.pgn")
 
-    min_max_move(chess_games)
+    chess_games = min_max_move(chess_games)
     [print(game) for game in chess_games]
 
 
