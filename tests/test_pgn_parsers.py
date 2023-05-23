@@ -11,7 +11,6 @@ test_moves = [
     "1. xx xx 20. xx xx 40. xx xx",
     "1. xx xx 40. xx xx 39. xx xx",
     "1. xx xx 20. xx xx 33. xx xx",
-
 ]
 
 
