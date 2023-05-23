@@ -1,15 +1,8 @@
 """test_pgn_parsers.py"""
+import os
 import unittest
 
-from src.pgn_parsers import get_game_length
-
-game_lengths = [
-    "1. xx 10. xx 40. xx",
-    "1. xx 9. xx 39. xx",
-    "1. xx 10. xx 39. xx",
-    "1. xx 2. xx 10. x 25.",
-    "1. xx 9. xx 40. xx",
-]
+from src.pgn_parsers import read_file
 
 
 class TestGamesList(unittest.TestCase):
@@ -17,12 +10,14 @@ class TestGamesList(unittest.TestCase):
     functions
     """
 
-    def test_get_game_length(self):
-        """Test if returned games has the min_move and not the
-        max_move in them
-        """
-        test_chess_games = get_game_length("10", "40", game_lengths)
-        self.assertEqual(test_chess_games, ["1. xx 10. xx 39. xx", "1. xx 2. xx 10. x 25."])
+    def test_read_file(self):
+        unittest_pgn = os.path.expanduser(
+            os.path.join("~", "pythone", "audible_chess", "docs", "uinttest.pgn")
+        )
+        test_chess_games = read_file(unittest_pgn)
+        self.assertEqual(
+            test_chess_games, ["1. xx xx 2. xx xx", "1. xx xx 2. xx xx"]]
+        )
 
 
 if __name__ == "__main__":
