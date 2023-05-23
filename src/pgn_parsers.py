@@ -7,7 +7,7 @@ pattern = {
 }
 
 
-def read_file(filename: str) -> None:
+def read_file(filename: str):
     games = []
     try:
         with open(filename) as read:
@@ -35,11 +35,10 @@ def min_max_move(games):
 
 
 def main():
-    chess_games = read_file("/media/bumper/EDD2-E40F/raspi32/lichess_short.pgn")
-    # chess_games = read_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
+    chess_games = read_file("/home/bumper/chess/bumper.pgn")
 
     min_max_move(chess_games)
-    [print(line) for line in chess_games]
+    print(chess_games[101])
 
 
 if __name__ == "__main__":
