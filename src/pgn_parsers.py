@@ -2,6 +2,8 @@
 
 pattern = {
     "start": "1. ",
+    "min_move": " 20. ",
+    "max_move": " 30. ",  # NOTE: Must be removed for final release
 }
 
 
