@@ -56,7 +56,7 @@ def move_seconds() -> int:
 
 
 def regex_pgn_file(filename: str):
-    r"""Read a chess pgn file. ("r" is to prevent flake8 errors)
+    """Read a chess pgn file.
 
     Return those lines beginning with "^(1\.\s)"
     and end with "(\s[1-0|0-1])$" as a list of str's
@@ -122,8 +122,24 @@ def set_max_move(max_move):
 
 
 def main():
+    u_choice = get_users_choice()
+    print(u_choice)
+    u_moves = get_moves()
+    print(u_moves)
+    u_mate = strip_mate_query()
+    print(u_mate)
+    u_secs = move_seconds()
+    print(u_secs)
+
     games = regex_pgn_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
     print(games)
+    del games
+
+    games = fast_pgn_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
+    print(games)
+    del games
+
+    set_max_move("44")
 
 
 if __name__ == "__main__":
