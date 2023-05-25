@@ -13,7 +13,7 @@ class TestFunctions(unittest.TestCase):
         file
         """
         test_pgn = os.path.expanduser(
-            os.path.join("~", "python", "audible_chess", "docs", "unittest.pgn")
+            os.path.join("~", "python", "audible_chess", "docs", "test_read_file.pgn")
         )
         test_games = regex_pgn_file(test_pgn)
         self.assertEqual(test_games, ["1. e4 e5 2. Nf3 Nc6 1-0", "1. e4 e5 2. Nf3 0-1"])
