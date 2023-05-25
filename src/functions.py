@@ -2,7 +2,7 @@
 import os
 import re
 import sys
-from pgn_parsers import regex
+from pgn_parsers import pattern
 
 
 def get_users_choice() -> int:
@@ -114,8 +114,8 @@ def fast_pgn_file(filename: str):
 
 
 def set_max_move(max_move):
-    regex["max_move_re"] = r"\s" + str(max_move) + r"\.\s"
-    regex["max_move"] = f" {max_move}. "
+    pattern["max_move_re"] = r"\s" + str(max_move) + r"\.\s"
+    pattern["max_move"] = f" {max_move}. "
 
 
 def main():
