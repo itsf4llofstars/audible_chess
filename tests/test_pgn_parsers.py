@@ -42,7 +42,7 @@ class TestGamesList(unittest.TestCase):
             os.path.join("~", "python", "audible_chess", "docs", "test_read_file.pgn")
         )
         test_chess_games = read_file(unittest_pgn)
-        self.assertEqual(test_chess_games, ["1. xx xx 2. xx xx", "1. xx xx 2. xx xx"])
+        self.assertEqual(test_chess_games, ["1. xx xx 2. xx xx 1-0", "1. xx xx 2. xx xx 0-1"])
 
     def test_min_max_move(self):
         test_chess_games = min_max_move(test_moves)
