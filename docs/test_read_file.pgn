@@ -1,9 +1,9 @@
 ["test_read_file.pgn"]
 ["Meta Data"]
 
-1. xx xx 2. xx xx
+1. xx xx 2. xx xx 1-0
 
 ["Meta Data"]
 
-1. xx xx 2. xx xx
-2. xx xx 2. xx xx
+1. xx xx 2. xx xx 0-1
+2. xx xx 2. xx xx# 1-0
