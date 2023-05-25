@@ -54,7 +54,7 @@ def move_seconds() -> int:
     return seconds
 
 
-def regex_pgn_file(filename: str) -> object:
+def regex_pgn_file(filename: str):
     r"""Read a chess pgn file. ("r" is to prevent flake8 errors)
 
     Return those lines beginning with "^(1\.\s)"
