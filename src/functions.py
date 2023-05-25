@@ -129,8 +129,10 @@ def main():
     # input("Cont... ")
     # strip_mate = strip_mate_query()
     # print(f"{strip_mate = }")
-    secs = move_seconds()
-    print(f"{secs = }")
+    # secs = move_seconds()
+    # print(f"{secs = }")
+    games = regex_pgn_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
+    print(games)
 
 
 if __name__ == "__main__":

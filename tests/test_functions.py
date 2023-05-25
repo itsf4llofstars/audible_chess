@@ -9,7 +9,7 @@ class TestFunctions(unittest.TestCase):
 
     def test_regex_pgn_file(self):
         """Test to show function returns proper beginning
-        and end of the chess games. This uses the unittest.pgn
+        and end of the chess games. This uses the test_read_file.pgn
         file
         """
         test_pgn = os.path.expanduser(
