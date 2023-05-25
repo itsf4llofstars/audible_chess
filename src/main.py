@@ -12,10 +12,11 @@ itsf4llofstars
 irooted4hal@mailfence.com
 2023
 """
-import menus as m
-import functions as f
-import pgn_parsers as pp
 import os
+
+import functions as f
+import menus as m
+import pgn_parsers as pp
 
 os.system("clear")
 print(m.endings_menu())

@@ -2,6 +2,7 @@
 import os
 import re
 import sys
+
 from pgn_parsers import pattern
 
 
@@ -121,16 +122,6 @@ def set_max_move(max_move):
 
 
 def main():
-    # users_choice = get_users_choice()
-    # print(f"{users_choice = }")
-    # input("Cont... ")
-    # moves = get_moves()
-    # print(f"{moves = }")
-    # input("Cont... ")
-    # strip_mate = strip_mate_query()
-    # print(f"{strip_mate = }")
-    # secs = move_seconds()
-    # print(f"{secs = }")
     games = regex_pgn_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
     print(games)
 
