@@ -1,6 +1,5 @@
 """pgn_parsers.py"""
 import os
-import sys
 
 pattern = {
     "start": "1. ",
@@ -79,21 +78,6 @@ def scrub_annotations(games):
     return games
 
 
-def get_winner(games, white: bool, mate: bool):
-    index = 0
-    while index < len(games):
-        if white and mate:
-            ...
-        elif white and not mate:
-            ...
-        elif not white and mate:
-            ...
-        elif not white and not mate:
-            ...
-        else:
-            sys.exit()
-
-
 def main():
     pgn_file = os.path.expanduser(os.path.join("~", "chess", "chess.pgn"))
 
@@ -101,7 +85,6 @@ def main():
     chess_games = min_max_move(chess_games)
     chess_games = no_kibitz(chess_games)
     chess_games = scrub_annotations(chess_games)
-    # chess_gmames = get_winner(chess_games)
     [print(game) for game in chess_games]
 
 
