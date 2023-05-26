@@ -15,7 +15,7 @@ pattern = {
     "tag_c": ">",
     "white_wins": " 1-0",
     "black_wins": " 0-1",
-    "mate": "#",
+    "hash": "#",
 }
 
 
@@ -81,6 +81,10 @@ def scrub_annotations(games):
 def white_mates(games):
     index = 0
     while index < len(games):
+        if not games[index].endswith(pattern["white_wins"]) and not pattern["hash"] in games[index]:
+            games.pop(index)
+            index -=1
+
         index += 1
     return games
 
