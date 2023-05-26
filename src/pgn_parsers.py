@@ -64,12 +64,24 @@ def no_kibitz(games):
     return games
 
 
+def scrub_annotations(games):
+    """DOC"""
+    annotations = ["!", "?", "+"]
+    index = 0
+    while index < len(games):
+        for annotate in annotations:
+            games[index] = games[index].replace(annotate, "")
+        index += 1
+    return games
+
+
 def main():
     pgn_file = os.path.expanduser(os.path.join("~", "chess", "chess.pgn"))
 
     chess_games = read_file(pgn_file)
     chess_games = min_max_move(chess_games)
     chess_games = no_kibitz(chess_games)
+    chess_games = scrub_annotations(chess_games)
     [print(game) for game in chess_games]
 
 
