@@ -78,6 +78,34 @@ def scrub_annotations(games):
     return games
 
 
+def white_mates(games):
+    index = 0
+    while index < len(games):
+        index += 1
+    return games
+
+
+def white_wins(games):
+    index = 0
+    while index < len(games):
+        index += 1
+    return games
+
+
+def black_mates(games):
+    index = 0
+    while index < len(games):
+        index += 1
+    return games
+
+
+def black_wins(games):
+    index = 0
+    while index < len(games):
+        index += 1
+    return games
+
+
 def main():
     pgn_file = os.path.expanduser(os.path.join("~", "chess", "chess.pgn"))
 
