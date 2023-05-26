@@ -13,6 +13,9 @@ pattern = {
     "bracket_c": "]",
     "tag_o": "<",
     "tag_c": ">",
+    "white_wins": " 1-0",
+    "black_wins": " 0-1",
+    "mate": "#",
 }
 
 
