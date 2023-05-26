@@ -78,10 +78,13 @@ def scrub_annotations(games):
     return games
 
 
-def white_mates(games):
+def get_white_mates(games):
     index = 0
     while index < len(games):
-        if not games[index].endswith(pattern["white_wins"]) and not pattern["hash"] in games[index]:
+        if not pattern["hash"] in games[index]:
+            games.pop(index)
+            index -=1
+        elif games[index].endswith(pattern["black_wins"]):
             games.pop(index)
             index -=1
 
@@ -89,7 +92,7 @@ def white_mates(games):
     return games
 
 
-def white_wins(games):
+def get_white_wins(games):
     index = 0
     while index < len(games):
         if pattern["hash"] in games[index]:
@@ -124,6 +127,9 @@ def main():
     chess_games = min_max_move(chess_games)
     chess_games = no_kibitz(chess_games)
     chess_games = scrub_annotations(chess_games)
+
+    white = True
+    mate = False
 
     if white:
         if mate:
