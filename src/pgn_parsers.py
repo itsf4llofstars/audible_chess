@@ -85,6 +85,18 @@ def main():
     chess_games = min_max_move(chess_games)
     chess_games = no_kibitz(chess_games)
     chess_games = scrub_annotations(chess_games)
+
+    if white:
+        if mate:
+            get_white_mates(chess_games)
+        else:
+            get_white_wins(chess_games)
+    elif not white:
+        if mate:
+            get_black_mates(chess_games)
+        else:
+            get_black_wins(chess_games)
+
     [print(game) for game in chess_games]
 
 
