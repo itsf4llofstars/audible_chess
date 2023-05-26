@@ -92,6 +92,13 @@ def white_mates(games):
 def white_wins(games):
     index = 0
     while index < len(games):
+        if pattern["hash"] in games[index]:
+            games.pop(index)
+            index -= 1
+        elif games[index].endswith(pattern["black_wins"]):
+            games.pop(index)
+            index -= 1
+
         index += 1
     return games
 
