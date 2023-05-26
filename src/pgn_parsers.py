@@ -106,14 +106,14 @@ def get_white_wins(games):
     return games
 
 
-def black_mates(games):
+def get_black_mates(games):
     index = 0
     while index < len(games):
         index += 1
     return games
 
 
-def black_wins(games):
+def get_black_wins(games):
     index = 0
     while index < len(games):
         index += 1
