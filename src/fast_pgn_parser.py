@@ -1,5 +1,6 @@
 """fast_pgn_parsers.py file"""
 import random
+import re
 
 
 def parse_pgn_file(
@@ -46,8 +47,29 @@ def parse_pgn_file(
             return games
 
 
-def get_study_game(games):
-    pass
+def get_study_game(games, min_move: str = "20", max_move: str = "40"):
+    legal = re.compile(r"1\.\s[a-hN][3-4acfh]3?\s[a-hN][5-6acfh]6?\s2\.\s[a-hBKNQR]")
+    max_move = re.compile(r"\s" + max_move + r"\.\s")
+    min_move = re.compile(r"\s" + min_move + r"\.\s")
+    kibitz = re.compile(r"(\(|{|\[|<|>|\]|}|\)")
+
+    annotates = ("!", "?", "+")
+
+    while True:
+        random_game = random.choice(games)
+
+        if (
+            not re.search(legal, random_game)
+            or re.search(max_move, random_game)
+            or not re.search(min_move, random_game)
+            or re.search(kibitz, random_game)
+        ):
+            continue
+
+        for annotate in annotates:
+            random_game = random_game.replace(annotate, "")
+
+        return random_game
 
 
 def main():
