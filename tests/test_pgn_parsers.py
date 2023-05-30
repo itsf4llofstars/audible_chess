@@ -6,6 +6,7 @@ from src.pgn_parsers import min_max_move
 from src.pgn_parsers import read_file
 from src.pgn_parsers import no_kibitz
 from src.pgn_parsers import scrub_annotations
+from src.pgn_parsers import get_white_mates
 
 test_moves = [
     "1. xx xx 19. xx xx 39. xx xx",
@@ -89,6 +90,10 @@ class TestGamesList(unittest.TestCase):
                 "1. xx xx 2. xx xx 3. xx xx",
             ],
         )
+
+    def test_get_white_mates(self):
+        test_white_mates = get_white_mates(winners_list)
+        self.assertEqual(test_white_mates, "1. xx xx 2. xx xx 3. xx xx# 1-0")
 
 
 if __name__ == "__main__":
