@@ -18,7 +18,7 @@ def parse_pgn_file(
                 if (
                     not line.startswith("1. ")
                     or f" {max_move} " in line
-                    or f" {min_move} " in line
+                    or f" {min_move} " not in line
                     or "(" in line
                     or ")" in line
                     or "{" in line
