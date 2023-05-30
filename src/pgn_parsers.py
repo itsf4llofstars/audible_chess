@@ -129,6 +129,15 @@ def get_black_mates(games):
 def get_black_wins(games):
     index = 0
     while index < len(games):
+        if pattern["hash"] in games[index]:
+            games.pop(index)
+            index -= 1
+        elif games[index].endswith(pattern["white_wins"]):
+            games.pop(index)
+            index -= 1
+        elif not games[index].endswith(pattern["black_wins"]):
+            games.pop(index)
+            index -= 1
         index += 1
     return games
 
