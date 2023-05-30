@@ -40,10 +40,9 @@ def plarse_pgn_file(
 
     except FileNotFoundError as fnfe:
         print(f"{fnfe}")
-    else:
-        pass
     finally:
-        pass
+        if games:
+            return games
 
 
 def main():
