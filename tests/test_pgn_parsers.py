@@ -38,6 +38,18 @@ test_annotations = [
     "1. xx xx 2. xx xx 3. xx xx",
 ]
 
+winners_list = [
+    "1. xx xx 2. xx xx 3. xx xx",
+    "1. xx xx 2. xx xx 3. xx xx# 1-0",
+    "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
+    "1. xx xx 2. xx xx 3. xx xx 0-1",
+    "1. xx xx 2. xx xx 3. xx xx",
+    "1. xx xx 2. xx xx 3. xx xx 1-0",
+    "1. xx xx 2. xx xx 3. xx xx# 0-1",
+    "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
+    "1. xx xx 2. xx xx 3. xx xx *",
+]
+
 
 class TestGamesList(unittest.TestCase):
     """Unittests to test the pgn_parser.py file
