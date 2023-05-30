@@ -42,7 +42,7 @@ test_annotations = [
     "1. xx xx 2. xx xx 3. xx xx",
 ]
 
-winners_list = [
+wins_list = [
     "1. xx xx 2. xx xx 3. xx xx",
     "1. xx xx 2. xx xx 3. xx xx# 1-0",
     "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
@@ -95,19 +95,19 @@ class TestGamesList(unittest.TestCase):
         )
 
     def test_get_white_mates(self):
-        test_white_mates = get_white_mates(winners_list)
+        test_white_mates = get_white_mates(wins_list)
         self.assertEqual(test_white_mates, ["1. xx xx 2. xx xx 3. xx xx# 1-0"])
 
     def test_get_white_wins(self):
-        test_white_wins = get_white_wins(winners_list)
+        test_white_wins = get_white_wins(wins_list)
         self.assertEqual(test_white_wins, ["1. xx xx 2. xx xx 3. xx xx 1-0"])
 
     def test_get_black_mates(self):
-        test_black_mates = get_black_mates(winners_list)
+        test_black_mates = get_black_mates(wins_list)
         self.assertEqual(test_black_mates, ["1. xx xx 2. xx xx 3. xx xx# 0-1"])
 
     def test_get_black_wins(self):
-        test_black_wins = get_black_wins(winners_list)
+        test_black_wins = get_black_wins(wins_list)
         self.assertEqual(test_black_wins, ["1. xx xx 2. xx xx 3. xx xx 0-1"])
 
 
