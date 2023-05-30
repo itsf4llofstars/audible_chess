@@ -1,7 +1,8 @@
 """fast_pgn_parsers.py file"""
+import random
 
 
-def plarse_pgn_file(
+def parse_pgn_file(
     filename,
     min_move: str = "20.",
     max_move: str = "40.",
@@ -45,9 +46,18 @@ def plarse_pgn_file(
             return games
 
 
-def main():
+def get_study_game(games):
     pass
 
 
+def main():
+    pgn_file = os.path.expanduser(os.path.join("~", "chess", "lichess_201407.pgn"))
+
+    chess_games = parse_pgn_file(pgn_file)
+    study_game = get_study_game(chess_games)
+
+
 if __name__ == "__main__":
+    import os
+
     main()
