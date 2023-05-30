@@ -20,6 +20,7 @@ pattern = {
 
 
 def read_file(filename: str):
+    """Needs Doc. Has test"""
     games = []
     try:
         with open(filename) as read:
@@ -34,6 +35,7 @@ def read_file(filename: str):
 
 
 def min_max_move(games):
+    """Needs Doc. Has Test"""
     index = 0
     while index < len(games):
         if (
@@ -48,6 +50,7 @@ def min_max_move(games):
 
 
 def no_kibitz(games):
+    """Needs Doc. Has test"""
     index = 0
     while index < len(games):
         if (
@@ -68,7 +71,7 @@ def no_kibitz(games):
 
 
 def scrub_annotations(games):
-    """DOC"""
+    """Needs Doc. Has test"""
     annotations = ["!", "?", "+"]
     index = 0
     while index < len(games):
