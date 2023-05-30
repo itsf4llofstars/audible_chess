@@ -104,7 +104,7 @@ class TestGamesList(unittest.TestCase):
 
     def test_get_black_mates(self):
         test_black_mates = get_black_mates(winners_list)
-        self.assertEqual(test_black_mates, ["1. xx xx 2. xx xx 3. xx xx# 1-0"])
+        self.assertEqual(test_black_mates, ["1. xx xx 2. xx xx 3. xx xx# 0-1"])
 
 
 if __name__ == "__main__":
