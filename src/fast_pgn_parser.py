@@ -51,7 +51,7 @@ def get_study_game(games, min_move: str = "20", max_move: str = "40"):
     legal = re.compile(r"1\.\s[a-hN][3-4acfh]3?\s[a-hN][5-6acfh]6?\s2\.\s[a-hBKNQR]")
     max_move = re.compile(r"\s" + max_move + r"\.\s")
     min_move = re.compile(r"\s" + min_move + r"\.\s")
-    kibitz = re.compile(r"(\(|{|\[|<|>|\]|}|\)")
+    kibitz = re.compile(r"(\(|{|\[|<|>|\]|}|\))")
 
     annotates = ("!", "?", "+")
 
@@ -77,6 +77,7 @@ def main():
 
     chess_games = parse_pgn_file(pgn_file)
     study_game = get_study_game(chess_games)
+    print(study_game)
 
 
 if __name__ == "__main__":
