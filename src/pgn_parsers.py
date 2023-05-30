@@ -104,8 +104,11 @@ def get_white_wins(games):
         elif games[index].endswith(pattern["black_wins"]):
             games.pop(index)
             index -= 1
-
+        elif not games[index].endswith(pattern["white_wins"]):
+            games.pop(index)
+            index -= 1
         index += 1
+
     return games
 
 
