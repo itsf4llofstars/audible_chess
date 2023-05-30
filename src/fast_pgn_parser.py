@@ -3,8 +3,8 @@
 
 def plarse_pgn_file(
     filename,
-    min_move: str = " 20. ",
-    max_move: str = " 40. ",
+    min_move: str = "20.",
+    max_move: str = "40.",
     white: bool = True,
     mate: bool = False,
 ):
@@ -15,15 +15,27 @@ def plarse_pgn_file(
                 line = line.strip()
                 if (
                     not line.startswith("1. ")
-                    or " 40. " in line
-                    or " 20. " not in line
+                    or f" {max_move} " in line
+                    or f" {min_move} " in line
                     or "(" in line
+                    or ")" in line
                     or "{" in line
+                    or "}" in line
                     or "[" in line
+                    or "]" in line
                     or "<" in line
+                    or ">" in line
                 ):
                     continue
-                else:
+                elif white and mate and "#" in line and line.endswith(" 1-0"):
+                    games.append(line)
+                elif white and not mate and "#" not in line and line.endswith(" 1-0"):
+                    games.append(line)
+                elif not white and mate and "#" in line and line.endswith(" 0-1"):
+                    games.append(line)
+                elif (
+                    not white and not mate and "#" not in line and line.endswith(" 0-1")
+                ):
                     games.append(line)
 
     except FileNotFoundError as fnfe:
