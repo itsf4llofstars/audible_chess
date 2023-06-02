@@ -3,7 +3,7 @@ import os
 import re
 import sys
 
-from src.pgn_parsers import pattern
+from pgn_parsers import pattern
 
 
 def get_users_choice() -> int:
