@@ -29,6 +29,7 @@ def main():
     input("cont...")
     print(min_max_moves())
 
+
 if __name__ == "__main__":
     import os
 
