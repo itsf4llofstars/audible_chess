@@ -2,14 +2,9 @@
 import os
 import unittest
 
-from src.pgn_parsers import min_max_move
-from src.pgn_parsers import read_file
-from src.pgn_parsers import no_kibitz
-from src.pgn_parsers import scrub_annotations
-from src.pgn_parsers import get_white_mates
-from src.pgn_parsers import get_white_wins
-from src.pgn_parsers import get_black_mates
-from src.pgn_parsers import get_black_wins
+from src.pgn_parsers import (get_black_mates, get_black_wins, get_white_mates,
+                             get_white_wins, min_max_move, no_kibitz,
+                             read_file, scrub_annotations)
 
 test_moves = [
     "1. xx xx 19. xx xx 39. xx xx",
