@@ -18,7 +18,7 @@ class TestFastParsers(unittest.TestCase):
         self.assertEqual(
             test_chess_games,
             [
-                "1. x xx 2. xx xx 20. xx xx 4. xx xx 5. xx 1-0",
+                "1. xx xx 2. xx xx 20. xx xx 4. xx xx 5. xx 1-0",
                 "1. xx xx 2. xx xx 20. xx xx 4. xx xx 5. xx 1-0",
             ],
         )
