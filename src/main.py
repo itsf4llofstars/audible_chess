@@ -35,3 +35,5 @@ path_file = f.get_file_name(files_path)
 print(m.min_max_moves())
 max_moves = f.get_moves()
 f.set_max_move(max_moves)
+
+move_times = f.move_seconds()
