@@ -25,5 +25,8 @@ game_endings = f.get_users_choice()
 
 # Print/get file path
 print(m.file_path())
+files_path = f.get_file_path()
 
 # Print/get file name
+print(m.file_name())
+path_file = f.get_file_name(files_path)

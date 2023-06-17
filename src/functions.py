@@ -25,6 +25,11 @@ def get_file_path() -> str:
     return os.path.expanduser(os.path.join("~", file_path))
 
 
+def get_file_name(file_path: str) -> str:
+    file_name = input("File Name: ")
+    return os.path.join(file_path, file_name)
+
+
 def get_moves() -> int:
     """Error checking required"""
     while True:
