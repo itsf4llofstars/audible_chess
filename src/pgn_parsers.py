@@ -23,15 +23,13 @@ def read_file(filename: str):
     """Needs Doc. Has test"""
     games = []
     try:
-        with open(filename) as read:
+        with open(filename, encoding="utf-8") as read:
             for line in read:
                 if line.startswith(pattern["start"]):
                     games.append(line.rstrip())
     except FileNotFoundError as fnfe:
         print(f"{fnfe}")
-    finally:
-        if games:
-            return games
+    return games
 
 
 def min_max_move(games):
