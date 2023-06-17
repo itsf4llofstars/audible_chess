@@ -49,19 +49,16 @@ def get_moves() -> int:
 
 
 def strip_mate_query() -> bool:
-    """Error check required"""
+    """Function docstring"""
     strip_mate = str(
         input("\n\n\tDo you wish to strip the last checkmating move? (y/n): ")
     )
     strip_mate = strip_mate.strip().lower()
 
-    if strip_mate[0] == "y" or strip_mate[0] == "n":
-        if strip_mate[0] == "y":
-            return True
-        elif strip_mate[0] == "n":
-            return False
-    elif strip_mate[0] != "y" or strip_mate[0] != "n":
+    if strip_mate[0] != "y" or strip_mate[0] != "n":
         raise ValueError("A [y]es or [n]o was not entered.")
+
+    return strip_mate[0] == "y"
 
 
 def move_seconds() -> int:
