@@ -80,6 +80,7 @@ def scrub_annotations(games):
 
 
 def get_white_mates(games):
+    """docstring"""
     index = 0
     while index < len(games):
         if not pattern["hash"] in games[index]:
@@ -94,6 +95,7 @@ def get_white_mates(games):
 
 
 def get_white_wins(games):
+    """docstring"""
     index = 0
     while index < len(games):
         if pattern["hash"] in games[index]:
@@ -111,6 +113,7 @@ def get_white_wins(games):
 
 
 def get_black_mates(games):
+    """docstring"""
     index = 0
     while index < len(games):
         if not pattern["hash"] in games[index]:
@@ -125,6 +128,7 @@ def get_black_mates(games):
 
 
 def get_black_wins(games):
+    """docstring"""
     index = 0
     while index < len(games):
         if pattern["hash"] in games[index]:
