@@ -22,8 +22,8 @@ os.system("clear")
 # Print/get game endings
 print(m.endings_menu())
 game_endings = f.get_users_choice()
-print(game_endings)
 
 # Print/get file path
+print(m.file_path())
 
 # Print/get file name

@@ -13,6 +13,14 @@ def endings_menu() -> str:
     )
 
 
+def file_path():
+    return (
+        "\n\n\tEnter the path to the pgn file relative to your home directory.\n"
+        "\tIf your files path is /home/$USER/chess/pgn_files, you will enter\n"
+        "\tchess/pgn_files"
+    )
+
+
 def min_max_moves() -> str:
     return (
         "\n\n\tThe minimum move for a game is currently hard set at 20.\n"
@@ -26,8 +34,8 @@ def min_max_moves() -> str:
 
 def main():
     print(endings_menu())
-    input("cont...")
-    print(min_max_moves())
+    print()
+    print(file_path())
 
 
 if __name__ == "__main__":
