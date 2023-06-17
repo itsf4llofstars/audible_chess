@@ -9,6 +9,7 @@ idea/
 !for_tests.pgn
 !test_read_file.pgn
 !unittest.pgn
+pylint.*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
