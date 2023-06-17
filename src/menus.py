@@ -47,6 +47,9 @@ def main():
     input()
     os.system("clear")
     print(file_name())
+    input()
+    os.system("clear")
+    print(min_max_moves())
 
 
 if __name__ == "__main__":

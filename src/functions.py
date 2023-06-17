@@ -8,14 +8,16 @@ from pgn_parsers import pattern
 
 def get_users_choice() -> int:
     """Error checking required"""
+    choice = 7
     while True:
         choice = int(input("\tChoice (1 - 6): "))
         if 1 <= choice < 6:
-            return choice
+            break
         elif choice == 6:
             sys.exit()
         else:
             print("\n\tEnter a number between 1 and 6 or 0 to exit.\n")
+    return choice
 
 
 def get_moves() -> int:
