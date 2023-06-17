@@ -32,9 +32,6 @@ if game_endings == 3 or game_endings == 5:
     os.system("clear")
     strip_mate = f.strip_mate_query()
 
-print(strip_mate)
-input()
-
 # Print/get file path
 os.system("clear")
 print(m.file_path())

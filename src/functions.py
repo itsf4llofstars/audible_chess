@@ -57,7 +57,6 @@ def strip_mate_query() -> bool:
     )
     strip_mate = strip_mate.strip().lower()
     strip_mate = strip_mate[0]
-    print(strip_mate[0])
 
     return strip_mate == "y"
 
