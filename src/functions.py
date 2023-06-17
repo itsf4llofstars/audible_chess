@@ -27,6 +27,8 @@ def get_file_path() -> str:
 
 def get_file_name(file_path: str) -> str:
     file_name = input("\n\tFile Name: ")
+    if not file_name.endswith(".pgn"):
+        file_name += ".pgn"
     return os.path.join(file_path, file_name)
 
 
