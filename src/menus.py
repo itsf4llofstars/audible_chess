@@ -21,6 +21,13 @@ def file_path():
     )
 
 
+def file_name():
+    return (
+        "Enter the name of the pgn file. You do not need to add the .pgn\n"
+        "to the end."
+    )
+
+
 def min_max_moves() -> str:
     return (
         "\n\n\tThe minimum move for a game is currently hard set at 20.\n"
@@ -34,8 +41,12 @@ def min_max_moves() -> str:
 
 def main():
     print(endings_menu())
-    print()
+    input()
+    os.system("clear")
     print(file_path())
+    input()
+    os.system("clear")
+    print(file_name())
 
 
 if __name__ == "__main__":
