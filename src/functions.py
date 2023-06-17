@@ -20,6 +20,11 @@ def get_users_choice() -> int:
     return choice
 
 
+def get_file_path() -> str:
+    file_path = input("Path: ")
+    return os.path.expanduser(os.path.join("~", file_path))
+
+
 def get_moves() -> int:
     """Error checking required"""
     while True:
