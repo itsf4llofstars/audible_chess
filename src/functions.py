@@ -115,7 +115,7 @@ def fast_pgn_file(filename: str):
     draw = " 1/2-1/2"
     pgn_games = []
     try:
-        with open(filename) as read:
+        with open(filename, encoding="utf-8") as read:
             for line in read:
                 line = line.strip()
                 if line.startswith(start) and (
