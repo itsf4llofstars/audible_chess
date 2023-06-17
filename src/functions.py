@@ -21,12 +21,12 @@ def get_users_choice() -> int:
 
 
 def get_file_path() -> str:
-    file_path = input("Path: ")
+    file_path = input("\n\tPath: ")
     return os.path.expanduser(os.path.join("~", file_path))
 
 
 def get_file_name(file_path: str) -> str:
-    file_name = input("File Name: ")
+    file_name = input("\n\tFile Name: ")
     return os.path.join(file_path, file_name)
 
 
