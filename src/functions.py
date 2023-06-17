@@ -3,7 +3,10 @@ import os
 import re
 import sys
 
-from pgn_parsers import pattern
+try:
+    from pgn_parsers import pattern
+except ImportError as ie:
+    print(f"{ie}")
 
 
 def get_users_choice() -> int:
@@ -129,6 +132,7 @@ def fast_pgn_file(filename: str):
 
 
 def set_max_move(max_move):
+    """Function docstring"""
     pattern["max_move_re"] = r"\s" + str(max_move) + r"\.\s"
     pattern["max_move"] = f" {max_move}. "
 
