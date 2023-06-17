@@ -16,23 +16,14 @@ import os
 
 import functions as f
 import menus as m
-import pgn_parsers as pp
 
 os.system("clear")
+
+# Print/get game endings
 print(m.endings_menu())
-user_ending = f.get_users_choice()
+game_endings = f.get_users_choice()
+print(game_endings)
 
-os.system("clear")
-print(m.min_max_moves())
-user_max_move = f.get_moves()
-f.set_max_move(user_max_move)
+# Print/get file path
 
-user_mate = False
-if user_ending == 3 or user_ending == 5:
-    os.system("clear")
-    user_mate = f.strip_mate_query()
-
-os.system("clear")
-user_move_time = f.move_seconds()
-
-os.system("clear")
+# Print/get file name
