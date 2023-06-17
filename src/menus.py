@@ -16,15 +16,15 @@ def endings_menu() -> str:
 def file_path():
     return (
         "\n\n\tEnter the path to the pgn file relative to your home directory.\n"
-        "\tIf your files path is /home/$USER/chess/pgn_files, you will enter\n"
+        "\tIf your files full path is /home/$USER/chess/pgn_files, you will enter:\n"
         "\tchess/pgn_files"
     )
 
 
 def file_name():
     return (
-        "Enter the name of the pgn file. You do not need to add the .pgn\n"
-        "to the end."
+        "\n\n\tEnter the name of the pgn file. You do not need to add the .pgn\n"
+        "\tto the end."
     )
 
 
