@@ -125,9 +125,7 @@ def fast_pgn_file(filename: str):
     except FileNotFoundError:
         print("File not found: fast_pgn_file()")
         sys.exit()
-    else:
-        if pgn_games:
-            return pgn_games
+    return pgn_games
 
 
 def set_max_move(max_move):
