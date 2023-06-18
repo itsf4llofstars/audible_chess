@@ -37,7 +37,43 @@ test_annotations = [
     "1. xx xx 2. xx xx 3. xx xx",
 ]
 
-wins_list = [
+white_wins_list = [
+    "1. xx xx 2. xx xx 3. xx xx",
+    "1. xx xx 2. xx xx 3. xx xx# 1-0",
+    "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
+    "1. xx xx 2. xx xx 3. xx xx 0-1",
+    "1. xx xx 2. xx xx 3. xx xx",
+    "1. xx xx 2. xx xx 3. xx xx 1-0",
+    "1. xx xx 2. xx xx 3. xx xx# 0-1",
+    "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
+    "1. xx xx 2. xx xx 3. xx xx *",
+]
+
+white_mates_list = [
+    "1. xx xx 2. xx xx 3. xx xx",
+    "1. xx xx 2. xx xx 3. xx xx# 1-0",
+    "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
+    "1. xx xx 2. xx xx 3. xx xx 0-1",
+    "1. xx xx 2. xx xx 3. xx xx",
+    "1. xx xx 2. xx xx 3. xx xx 1-0",
+    "1. xx xx 2. xx xx 3. xx xx# 0-1",
+    "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
+    "1. xx xx 2. xx xx 3. xx xx *",
+]
+
+black_wins_list = [
+    "1. xx xx 2. xx xx 3. xx xx",
+    "1. xx xx 2. xx xx 3. xx xx# 1-0",
+    "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
+    "1. xx xx 2. xx xx 3. xx xx 0-1",
+    "1. xx xx 2. xx xx 3. xx xx",
+    "1. xx xx 2. xx xx 3. xx xx 1-0",
+    "1. xx xx 2. xx xx 3. xx xx# 0-1",
+    "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
+    "1. xx xx 2. xx xx 3. xx xx *",
+]
+
+black_mates_list = [
     "1. xx xx 2. xx xx 3. xx xx",
     "1. xx xx 2. xx xx 3. xx xx# 1-0",
     "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
@@ -90,19 +126,19 @@ class TestGamesList(unittest.TestCase):
         )
 
     def test_get_white_mates(self):
-        test_white_mates = get_white_mates(wins_list)
+        test_white_mates = get_white_mates(white_mates_list)
         self.assertEqual(test_white_mates, ["1. xx xx 2. xx xx 3. xx xx# 1-0"])
 
     def test_get_white_wins(self):
-        test_white_wins = get_white_wins(wins_list)
+        test_white_wins = get_white_wins(white_wins_list)
         self.assertEqual(test_white_wins, ["1. xx xx 2. xx xx 3. xx xx 1-0"])
 
     def test_get_black_mates(self):
-        test_black_mates = get_black_mates(wins_list)
+        test_black_mates = get_black_mates(black_mates_list)
         self.assertEqual(test_black_mates, ["1. xx xx 2. xx xx 3. xx xx# 0-1"])
 
     def test_get_black_wins(self):
-        test_black_wins = get_black_wins(wins_list)
+        test_black_wins = get_black_wins(black_wins_list)
         self.assertEqual(test_black_wins, ["1. xx xx 2. xx xx 3. xx xx 0-1"])
 
 
