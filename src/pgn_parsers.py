@@ -142,30 +142,36 @@ def get_black_wins(games):
     return games
 
 
-def main():
-    pgn_file = os.path.expanduser(os.path.join("~", "chess", "chess.pgn"))
-
-    chess_games = read_file(pgn_file)
-    chess_games = min_max_move(chess_games)
-    chess_games = no_kibitz(chess_games)
-    chess_games = scrub_annotations(chess_games)
-
-    white = True
-    mate = False
-
-    if white:
-        if mate:
-            get_white_mates(chess_games)
-        else:
-            get_white_wins(chess_games)
-    elif not white:
-        if mate:
-            get_black_mates(chess_games)
-        else:
-            get_black_wins(chess_games)
-
-    [print(game) for game in chess_games]
-
-
 if __name__ == "__main__":
-    main()
+    games = [
+        "1. xx xx 2. xx xx 3. xx xx",
+        "1. xx xx 2. xx xx 3. xx xx# 0-1",
+        "1. xx xx 2. xx xx 3. xx xx# 0-1",
+        "1. xx xx 2. xx xx 3. xx xx 1-0",
+        "1. xx xx 2. xx xx 3. xx xx# 1-0",
+        "1. xx xx 2. xx xx 3. xx xx 0-1",
+        "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
+        "1. xx xx 2. xx xx 3. xx xx 1-0",
+        "1. xx xx 2. xx xx 3. xx xx",
+        "1. xx xx 2. xx xx 3. xx xx# 0-1",
+        "1. xx xx 2. xx xx 3. xx xx# 1-0",
+        "1. xx xx 2. xx xx 3. xx xx 1-0",
+        "1. xx xx 2. xx xx 3. xx xx 1/2-1/2",
+    ]
+
+    index = 0
+    while index < len(games):
+        if pattern["hash"] in games[index]:
+            games.pop(index)
+            index -= 1
+        elif games[index].endswith(pattern["black_wins"]):
+            games.pop(index)
+            index -= 1
+        elif not games[index].endswith(pattern["white_wins"]):
+            games.pop(index)
+            index -= 1
+        index += 1
+        os.system("clear")
+        [print(game) for game in games]
+        # print(f"{index = } {len(games)} {games[index]}")
+        input()
