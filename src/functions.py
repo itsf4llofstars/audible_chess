@@ -47,6 +47,11 @@ def get_file_path() -> str:
 
 
 def get_file_name(file_path: str) -> str:
+    file_name_text =  (
+        "\n\n\tEnter the name of the pgn file. You do not need to add the .pgn\n"
+        "\tto the end."
+    )
+    print(file_name_text)
     file_name = input("\n\tFile Name: ")
     if not file_name.endswith(".pgn"):
         file_name += ".pgn"
@@ -157,6 +162,8 @@ def main():
     print(u_choice)
     u_file_path = get_file_path()
     print(u_file_path)
+    u_file_name = get_file_name(u_file_path)
+    print(u_file_name)
     # u_moves = get_moves()
     # print(u_moves)
     # u_mate = strip_mate_query()
