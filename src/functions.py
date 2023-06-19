@@ -21,6 +21,7 @@ def get_users_choice() -> int:
         "\n\t\t6. Exit\n\n"
     )
 
+    os.system("clear")
     print(ending_choices)
 
     choice = 7
@@ -41,6 +42,8 @@ def get_file_path() -> str:
         "\tIf your files full path is /home/$USER/chess/pgn_files, you will enter:\n"
         "\tchess/pgn_files"
     )
+
+    os.system("clear")
     print(file_path_text)
     file_path = input("\n\tPath: ")
     return os.path.expanduser(os.path.join("~", file_path))
@@ -51,6 +54,8 @@ def get_file_name(file_path: str) -> str:
         "\n\n\tEnter the name of the pgn file. You do not need to add the .pgn\n"
         "\tto the end."
     )
+
+    os.system("clear")
     print(file_name_text)
     file_name = input("\n\tFile Name: ")
     if not file_name.endswith(".pgn"):
@@ -69,6 +74,8 @@ def get_moves() -> int:
             "\tmoves, (inclusive). There is no need to add leading or trailing\n"
             "\tspaces or, a period.\n"
         )
+
+        os.system("clear")
         print(file_moves_text)
         moves = int(input("\tEnter your max moves (21 - 99) 0 to quit: "))
         if 20 < moves < 100:
@@ -85,6 +92,7 @@ def get_moves() -> int:
 
 def strip_mate_query() -> bool:
     """Function docstring"""
+    os.system("clear")
     strip_mate = str(
             input(
                 '\n\n\tEnter a "y", "yes", to strip the last checkmating move, other letters will result in no: '
@@ -98,6 +106,7 @@ def strip_mate_query() -> bool:
 
 def move_seconds() -> int:
     """Error check needed"""
+    os.system("clear")
     seconds = int(input("\n\n\tPlease enter the number of seconds between each move: "))
     assert isinstance(seconds, int)
     assert seconds > 4
@@ -171,17 +180,18 @@ def set_max_move(max_move):
 
 def main():
     u_choice = get_users_choice()
-    print(u_choice)
     u_file_path = get_file_path()
-    print(u_file_path)
     u_file_name = get_file_name(u_file_path)
-    print(u_file_name)
     u_moves = get_moves()
+    u_mate = strip_mate_query()
+    u_secs = move_seconds()
+
+    print(u_choice)
+    print(u_file_path)
+    print(u_file_name)
     print(u_moves)
-    # u_mate = strip_mate_query()
-    # print(u_mate)
-    # u_secs = move_seconds()
-    # print(u_secs)
+    print(u_mate)
+    print(u_secs)
 
     # games = regex_pgn_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
     # print(games)
