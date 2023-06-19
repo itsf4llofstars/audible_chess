@@ -17,7 +17,6 @@ import sys
 
 try:
     import functions as f
-    import menus as m
 except ImportError as ie:
     print(f"{ie}")
 
