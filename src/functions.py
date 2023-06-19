@@ -11,6 +11,18 @@ except ImportError as ie:
 
 def get_users_choice() -> int:
     """Error checking required"""
+    ending_choices =  (
+        "\n\n\tSelect your game ending:\n"
+        "\n\t\t1. Draw"
+        "\n\t\t2. White Wins"
+        "\n\t\t3. White Wins by Checkmate"
+        "\n\t\t4. Black Wins"
+        "\n\t\t5. Black Wins by Checkmate"
+        "\n\t\t6. Exit\n\n"
+    )
+
+    print(ending_choices)
+
     choice = 7
     while True:
         choice = int(input("\tChoice (1 - 6): "))
@@ -51,10 +63,10 @@ def get_moves() -> int:
 def strip_mate_query() -> bool:
     """Function docstring"""
     strip_mate = str(
-        input(
-            '\n\n\tEnter a "y", "yes", to strip the last checkmating move, other letters will result in no: '
-        )
-    )
+            input(
+                '\n\n\tEnter a "y", "yes", to strip the last checkmating move, other letters will result in no: '
+                )
+            )
     strip_mate = strip_mate.strip().lower()
     strip_mate = strip_mate[0]
 
@@ -119,8 +131,8 @@ def fast_pgn_file(filename: str):
             for line in read:
                 line = line.strip()
                 if line.startswith(start) and (
-                    line.endswith(white) or line.endswith(black) or line.endswith(draw)
-                ):
+                        line.endswith(white) or line.endswith(black) or line.endswith(draw)
+                        ):
                     pgn_games.append(line)
     except FileNotFoundError:
         print("File not found: fast_pgn_file()")
@@ -137,22 +149,22 @@ def set_max_move(max_move):
 def main():
     u_choice = get_users_choice()
     print(u_choice)
-    u_moves = get_moves()
-    print(u_moves)
-    u_mate = strip_mate_query()
-    print(u_mate)
-    u_secs = move_seconds()
-    print(u_secs)
+    # u_moves = get_moves()
+    # print(u_moves)
+    # u_mate = strip_mate_query()
+    # print(u_mate)
+    # u_secs = move_seconds()
+    # print(u_secs)
 
-    games = regex_pgn_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
-    print(games)
-    del games
+    # games = regex_pgn_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
+    # print(games)
+    # del games
 
-    games = fast_pgn_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
-    print(games)
-    del games
+    # games = fast_pgn_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
+    # print(games)
+    # del games
 
-    set_max_move("44")
+    # set_max_move("44")
 
 
 if __name__ == "__main__":
