@@ -61,6 +61,15 @@ def get_file_name(file_path: str) -> str:
 def get_moves() -> int:
     """Error checking required"""
     while True:
+        file_moves_text =  (
+            "\n\n\tThe minimum move for a game is currently hard set at 20.\n"
+            "\tThe maximum move is left up to you, please enter the maximum\n"
+            "\tnumber of moves you want for your study game.\n\n"
+            "\tExample: Entering 38 can result in games ending between 20 and 38\n"
+            "\tmoves, (inclusive). There is no need to add leading or trailing\n"
+            "\tspaces or, a period.\n"
+        )
+        print(file_moves_text)
         moves = int(input("\tEnter your max moves (21 - 99) 0 to quit: "))
         if 20 < moves < 100:
             moves += 1
@@ -68,7 +77,10 @@ def get_moves() -> int:
         elif moves == 0:
             sys.exit()
         else:
+            os.system("clear")
             print("\n\tPlease enter a number between 21 and 99 or 0 to quit.\n")
+            input("Contnue...")
+            os.system("clear")
 
 
 def strip_mate_query() -> bool:
@@ -164,8 +176,8 @@ def main():
     print(u_file_path)
     u_file_name = get_file_name(u_file_path)
     print(u_file_name)
-    # u_moves = get_moves()
-    # print(u_moves)
+    u_moves = get_moves()
+    print(u_moves)
     # u_mate = strip_mate_query()
     # print(u_mate)
     # u_secs = move_seconds()
