@@ -36,6 +36,12 @@ def get_users_choice() -> int:
 
 
 def get_file_path() -> str:
+    file_path_text =  (
+        "\n\n\tEnter the path to the pgn file relative to your home directory.\n"
+        "\tIf your files full path is /home/$USER/chess/pgn_files, you will enter:\n"
+        "\tchess/pgn_files"
+    )
+    print(file_path_text)
     file_path = input("\n\tPath: ")
     return os.path.expanduser(os.path.join("~", file_path))
 
@@ -149,6 +155,8 @@ def set_max_move(max_move):
 def main():
     u_choice = get_users_choice()
     print(u_choice)
+    u_file_path = get_file_path()
+    print(u_file_path)
     # u_moves = get_moves()
     # print(u_moves)
     # u_mate = strip_mate_query()
