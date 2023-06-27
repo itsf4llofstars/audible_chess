@@ -13,7 +13,6 @@ irooted4hal@mailfence.com
 2023
 """
 import os
-import sys
 
 try:
     import functions as f
