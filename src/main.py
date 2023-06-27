@@ -17,8 +17,8 @@ import sys
 
 try:
     import functions as f
-except ImportError as ie:
-    print(f"{ie}")
+except ImportError as import_error:
+    print(f"{import_error}")
 
 # Print/get game endings
 game_endings = f.get_users_choice()
