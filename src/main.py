@@ -25,8 +25,12 @@ game_endings = f.get_users_choice()
 
 # Print/get mate
 strip_mate: bool = None
-if game_endings == 3 or game_endings == 5:
+
+# Below changed as per pylint.
+if game_endings in (3, 5):
     strip_mate = f.strip_mate_query()
+# if game_endings == 3 or game_endings == 5:
+#     strip_mate = f.strip_mate_query()
 
 # Print/get file path
 files_path = f.get_file_path()
