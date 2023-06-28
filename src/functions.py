@@ -5,21 +5,21 @@ import sys
 
 try:
     from pgn_parsers import pattern
-except ImportError as ie:
-    print(f"{ie}")
+except ImportError as import_error:
+    print(f"{import_error}")
 
 
 def get_users_choice() -> int:
     """Error checking required"""
-    ending_choices =  (
-        "\n\n\tSelect your game ending:\n"
-        "\n\t\t1. Draw"
-        "\n\t\t2. White Wins"
-        "\n\t\t3. White Wins by Checkmate"
-        "\n\t\t4. Black Wins"
-        "\n\t\t5. Black Wins by Checkmate"
-        "\n\t\t6. Exit\n\n"
-    )
+    ending_choices = (
+            "\n\n\tSelect your game ending:\n"
+            "\n\t\t1. Draw"
+            "\n\t\t2. White Wins"
+            "\n\t\t3. White Wins by Checkmate"
+            "\n\t\t4. Black Wins"
+            "\n\t\t5. Black Wins by Checkmate"
+            "\n\t\t6. Exit\n\n"
+            )
 
     os.system("clear")
     print(ending_choices)
@@ -37,11 +37,11 @@ def get_users_choice() -> int:
 
 
 def get_file_path() -> str:
-    file_path_text =  (
-        "\n\n\tEnter the path to the pgn file relative to your home directory.\n"
-        "\tIf your files full path is /home/$USER/chess/pgn_files, you will enter:\n"
-        "\tchess/pgn_files"
-    )
+    file_path_text = (
+            "\n\n\tEnter the path to the pgn file relative to your home directory.\n"
+            "\tIf your files full path is /home/$USER/chess/pgn_files, you will enter:\n"
+            "\tchess/pgn_files"
+            )
 
     os.system("clear")
     print(file_path_text)
@@ -50,10 +50,10 @@ def get_file_path() -> str:
 
 
 def get_file_name(file_path: str) -> str:
-    file_name_text =  (
-        "\n\n\tEnter the name of the pgn file. You do not need to add the .pgn\n"
-        "\tto the end."
-    )
+    file_name_text = (
+            "\n\n\tEnter the name of the pgn file. You do not need to add the .pgn\n"
+            "\tto the end."
+            )
 
     os.system("clear")
     print(file_name_text)
@@ -66,14 +66,14 @@ def get_file_name(file_path: str) -> str:
 def get_moves() -> int:
     """Error checking required"""
     while True:
-        file_moves_text =  (
-            "\n\n\tThe minimum move for a game is currently hard set at 20.\n"
-            "\tThe maximum move is left up to you, please enter the maximum\n"
-            "\tnumber of moves you want for your study game.\n\n"
-            "\tExample: Entering 38 can result in games ending between 20 and 38\n"
-            "\tmoves, (inclusive). There is no need to add leading or trailing\n"
-            "\tspaces or, a period.\n"
-        )
+        file_moves_text = (
+                "\n\n\tThe minimum move for a game is currently hard set at 20.\n"
+                "\tThe maximum move is left up to you, please enter the maximum\n"
+                "\tnumber of moves you want for your study game.\n\n"
+                "\tExample: Entering 38 can result in games ending between 20 and 38\n"
+                "\tmoves, (inclusive). There is no need to add leading or trailing\n"
+                "\tspaces or, a period.\n"
+                )
 
         os.system("clear")
         print(file_moves_text)
