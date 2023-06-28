@@ -29,7 +29,8 @@ def parse_pgn_file(
                     or ">" in line
                 ):
                     continue
-                elif white and mate and "#" in line and line.endswith(" 1-0"):
+
+                if white and mate and "#" in line and line.endswith(" 1-0"):
                     games.append(line)
                 elif white and not mate and "#" not in line and line.endswith(" 1-0"):
                     games.append(line)
