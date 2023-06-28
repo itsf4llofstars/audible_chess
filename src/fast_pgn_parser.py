@@ -43,9 +43,10 @@ def parse_pgn_file(
 
     except FileNotFoundError as fnfe:
         print(f"{fnfe}")
-    finally:
-        if games:
-            return games
+
+    if games:
+        return games
+    return None
 
 
 def get_study_game(games, min_move: str = "20", max_move: str = "40"):
