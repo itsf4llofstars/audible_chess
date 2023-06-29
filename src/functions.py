@@ -37,6 +37,7 @@ def get_users_choice() -> int:
 
 
 def get_file_path() -> str:
+    """get_file_path"""
     file_path_text = (
             "\n\n\tEnter the path to the pgn file relative to your home directory.\n"
             "\tIf your files full path is /home/$USER/chess/pgn_files, you will enter:\n"
@@ -50,6 +51,7 @@ def get_file_path() -> str:
 
 
 def get_file_name(file_path: str) -> str:
+    """get_file_name"""
     file_name_text = (
             "\n\n\tEnter the name of the pgn file. You do not need to add the .pgn\n"
             "\tto the end."
@@ -93,11 +95,7 @@ def get_moves() -> int:
 def strip_mate_query() -> bool:
     """Function docstring"""
     os.system("clear")
-    strip_mate = str(
-            input(
-                '\n\n\tEnter a "y", "yes", to strip the last checkmating move, other letters will result in no: '
-                )
-            )
+    strip_mate = str(input('\n\n\tEnter a "y", "yes", to strip the last checkmating move, other letters will result in no: '))
     strip_mate = strip_mate.strip().lower()
     strip_mate = strip_mate[0]
 
@@ -179,6 +177,7 @@ def set_max_move(max_move):
 
 
 def main():
+    """main"""
     u_choice = get_users_choice()
     u_file_path = get_file_path()
     u_file_name = get_file_name(u_file_path)
