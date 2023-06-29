@@ -10,6 +10,7 @@ def parse_pgn_file(
     white: bool = True,
     mate: bool = False,
 ):
+    """parse_pgn_file"""
     games = []
     try:
         with open(filename, encoding="utf-8") as read:
@@ -50,6 +51,7 @@ def parse_pgn_file(
 
 
 def get_study_game(games, min_move: str = "20", max_move: str = "40"):
+    """get_study_game"""
     legal = re.compile(r"1\.\s[a-hN][3-4acfh]3?\s[a-hN][5-6acfh]6?\s2\.\s[a-hBKNQR]")
     max_move = re.compile(r"\s" + max_move + r"\.\s")
     min_move = re.compile(r"\s" + min_move + r"\.\s")
@@ -75,6 +77,7 @@ def get_study_game(games, min_move: str = "20", max_move: str = "40"):
 
 
 def main():
+    """main"""
     pgn_file = os.path.expanduser(os.path.join("~", "chess", "lichess_201407.pgn"))
 
     chess_games = parse_pgn_file(pgn_file)
