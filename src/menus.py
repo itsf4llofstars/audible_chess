@@ -2,6 +2,7 @@
 
 
 def endings_menu() -> str:
+    """endings_menu"""
     return (
             "\n\n\tSelect your game ending:\n"
             "\n\t\t1. Draw"
@@ -14,6 +15,7 @@ def endings_menu() -> str:
 
 
 def file_path():
+    """file_path"""
     return (
             "\n\n\tEnter the path to the pgn file relative to your home directory.\n"
             "\tIf your files full path is /home/$USER/chess/pgn_files, you will enter:\n"
@@ -22,6 +24,7 @@ def file_path():
 
 
 def file_name():
+    """file_name"""
     return (
             "\n\n\tEnter the name of the pgn file. You do not need to add the .pgn\n"
             "\tto the end."
@@ -29,6 +32,7 @@ def file_name():
 
 
 def min_max_moves() -> str:
+    """min_max_moves"""
     return (
             "\n\n\tThe minimum move for a game is currently hard set at 20.\n"
             "\tThe maximum move is left up to you, please enter the maximum\n"
@@ -40,6 +44,7 @@ def min_max_moves() -> str:
 
 
 def main():
+    """main"""
     print(endings_menu())
     input()
     os.system("clear")
