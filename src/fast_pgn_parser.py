@@ -12,7 +12,7 @@ def parse_pgn_file(
 ):
     games = []
     try:
-        with open(filename) as read:
+        with open(filename, encoding="utf-8") as read:
             for line in read:
                 line = line.strip()
                 if (
