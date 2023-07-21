@@ -32,7 +32,7 @@ def get_users_choice() -> int:
         elif choice == 6:
             sys.exit()
         else:
-            print("\n\tEnter a number between 1 and 6 or 0 to exit.\n")
+            print("\n\tEnter a number between 1 and 6.\n")
     return choice
 
 
