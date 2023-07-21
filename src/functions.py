@@ -189,12 +189,12 @@ def main():
     u_mate = strip_mate_query()
     u_secs = move_seconds()
 
-    print(u_choice)
-    print(u_file_path)
-    print(u_file_name)
-    print(u_moves)
-    print(u_mate)
-    print(u_secs)
+    print(f"{u_choice = }")
+    print(f"{u_file_path = }")
+    print(f"{u_file_name = }")
+    print(f"{u_moves = }")
+    print(f"{u_mate = }")
+    print(f"{u_secs = }")
 
     # games = regex_pgn_file("/home/bumper/python/audible_chess/docs/test_read_file.pgn")
     # print(games)
