@@ -78,7 +78,9 @@ def get_study_game(games, min_move: str = "20", max_move: str = "40"):
 
 def main():
     """main"""
-    pgn_file = os.path.expanduser(os.path.join("~", "chess", "lichess_201407.pgn"))
+    pgn_file = os.path.expanduser(
+        os.path.join("~", "python", "audible_chess", "docs", "debug_fpt_pgn.pgn")
+    )
 
     chess_games = parse_pgn_file(pgn_file)
     study_game = get_study_game(chess_games)
