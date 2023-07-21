@@ -27,7 +27,7 @@ def get_users_choice() -> int:
     choice = 6
     while True:
         choice = int(input("\tChoice (1 - 6): "))
-        if 1 <= choice < 6:
+        if 0 < choice < 6:
             break
         elif choice == 6:
             sys.exit()
