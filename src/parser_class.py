@@ -35,6 +35,37 @@ class Parser:
         except FileNotFoundError as fnfe:
             raise FileNotFoundError("File not found") from fnfe
 
+    def clean_all(self):
+        index = 0
+        while True:
+            if (
+                self.patterns["paren_o"] in self.raw_games[index]
+                or self.patterns["paren_c"] in self.raw_games[index]
+            ):
+                self.raw_games.pop(index)
+            elif (
+                self.patterns["brace_o"] in self.raw_games[index]
+                or self.patterns["brace_c"] in self.raw_games[index]
+            ):
+                self.raw_games.pop(index)
+            elif (
+                self.patterns["bracket_o"] in self.raw_games[index]
+                or self.patterns["bracket_c"] in self.raw_games[index]
+            ):
+                self.raw_games.pop(index)
+            elif (
+                self.patterns["tag_o"] in self.raw_games[index]
+                or self.patterns["tag_c"] in self.raw_games[index]
+            ):
+                self.raw_games.pop(index)
+            elif (
+                self.patterns["to_long"] in self.raw_games[index]
+                or self.patterns["to_short"] not in self.raw_games[index]
+            ):
+                self.raw_games.pop(index)
+            else:
+                index += 1
+
 
 def main():
     ...
