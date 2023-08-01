@@ -25,6 +25,7 @@ class Parser:
             "draw": " 1/2-1/2",
             "mate": "#",
         }
+        self.annotations = ["!", "?", "+"]
 
     def read_file(self):
         try:
