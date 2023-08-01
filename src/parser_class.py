@@ -34,8 +34,10 @@ class Parser:
     def read_file(self):
         try:
             with open(self.filename, encoding="utf-8") as read:
-                [self.raw_games.append(line.rstrip()) for line in read
-                 if not line.startswith(self.patterns["start"])]
+                for line in read:
+                    if not line.startswith(self.patterns["start"]):
+                        continue
+                    self.raw_games.append(line.rstrip())
         except FileNotFoundError as fnfe:
             raise FileNotFoundError("File not found") from fnfe
 
@@ -70,11 +72,22 @@ class Parser:
             else:
                 index += 1
 
+    def clean_paren(self):
+        index = 0
+        while index < len(self.raw_games):
+            if self.patterns["paren_o"] in self.raw_games[index]:
+                self.raw_games.pop(index)
+            elif self.patterns["paren_c"] in self.raw_games[index]:
+                self.raw_games.pop(index)
+            else:
+                index += 1
+
 
 def main():
-    pgn_name = os.path.expanduser(os.path.join("~", "chess", "chess.pgn"))
+    pgn_name = os.path.expanduser(os.path.join("~", "chess", "bumper.pgn"))
     parser = Parser(pgn_name)
-    parser.clean_all()
+    parser.read_file()
+    parser.clean_paren()
     parser.print_games()
 
 
