@@ -20,10 +20,10 @@ class Parser:
             "bracket_c": "]",
             "tag_o": "<",
             "tag_c": ">",
-            "white": " 1-0",
-            "black": " 0-1",
-            "draw": " 1/2-1/2",
-            "mate": "#",
+            "white": re.compile(" 1-0"),
+            "black": re.compile(" 0-1"),
+            "draw": re.compile(" 1/2-1/2"),
+            "mate": re.compile("#"),
         }
         self.annotations = ["!", "?", "+"]
 
