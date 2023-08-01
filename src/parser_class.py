@@ -26,6 +26,11 @@ class Parser:
         try:
             with open(self.filename, encoding="utf-8") as read:
                 for line in read:
+                    if not line.startswith(self.patterns["start"]):
+                        continue
+                    self.raw_games.append(line.rstrip())
+        except FileNotFoundError as fnfe:
+            raise FileNotFoundError("File not found") from fnfe
 
 
 def main():
