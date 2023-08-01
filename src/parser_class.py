@@ -25,10 +25,8 @@ class Parser:
     def read_file(self):
         try:
             with open(self.filename, encoding="utf-8") as read:
-                for line in read:
-                    if not line.startswith(self.patterns["start"]):
-                        continue
-                    self.raw_games.append(line.rstrip())
+                [self.raw_games.append(line.rstrip()) for line in read
+                 if not line.startswith(patterns["start"])]
         except FileNotFoundError as fnfe:
             raise FileNotFoundError("File not found") from fnfe
 
