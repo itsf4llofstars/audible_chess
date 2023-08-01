@@ -1,4 +1,5 @@
 """parser_class.py"""
+import os
 import re
 
 
@@ -27,6 +28,9 @@ class Parser:
         }
         self.annotations = ["!", "?", "+"]
 
+    def print_games(self):
+        [print(game) for game in self.raw_games]
+
     def read_file(self):
         try:
             with open(self.filename, encoding="utf-8") as read:
@@ -37,7 +41,7 @@ class Parser:
 
     def clean_all(self):
         index = 0
-        while True:
+        while index < len(self.raw_games):
             if (
                 self.patterns["paren_o"] in self.raw_games[index]
                 or self.patterns["paren_c"] in self.raw_games[index]
@@ -68,7 +72,10 @@ class Parser:
 
 
 def main():
-    ...
+    pgn_name = os.path.expanduser(os.path.join("~", "chess", "chess.pgn"))
+    parser = Parser(pgn_name)
+    parser.clean_all()
+    parser.print_games()
 
 
 if __name__ == "__main__":
