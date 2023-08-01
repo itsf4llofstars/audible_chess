@@ -8,8 +8,8 @@ class Parser:
         self.raw_games = []
         self.patterns = {
             "start": "1. ",
-            "star_re": r"1\.\s",
-            "legal_re": r"^1\.\s[a-hN][3-4acfg]3?\s[a-hN][5-6acfg]6?\s2\.\s",
+            "star_re": re.compile(r"1\.\s"),
+            "legal_re": re.compile(r"^1\.\s[a-hN][3-4acfg]3?\s[a-hN][5-6acfg]6?\s2\.\s"),
         }
 
     @property
